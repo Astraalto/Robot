@@ -1,13 +1,29 @@
 *** Settings ***
-Library     SeleniumLibrary
+Documentation
+
+...                   pip install robotframework robotframework-seleniumlibrary
+...                   ChromeDriver (or GeckoDriver) matching your browser version
+
+
+Library     SeleniumLibrary     timeout=15s    
 
 
 *** Variables ***
-${URL}      https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
+${URL_ALL}      https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
+${URL}          https://www.linkedin.com  
 ${BROWSER}  chrome
 
 *** Test Cases ***
 Test Engineer Finland
-    Open Browser      ${URL}       ${BROWSER} 
+    [Documentation] 
+    [Tags]    Smoke  Easy
+    Open Browser      ${URL_ALL}       ${BROWSER} 
     Maximize Browser Window
-    Sleep 3s
+    Sleep  3s
+
+Linkedin Page Loaded Successfully
+    [Documentation]    Verify that page opened without issues
+    [Tags]             Smoke
+    Open Browser       ${URL}      ${BROWSER}
+
+    
