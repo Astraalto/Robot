@@ -2,23 +2,26 @@
 Documentation
 
 ...                   pip install robotframework robotframework-seleniumlibrary
-...                   ChromeDriver (or GeckoDriver) matching your browser version
+...                   ChromeDriver (or GeckoDriver) matching browser version
 
 
 Library     SeleniumLibrary     timeout=15s    
 
 
 *** Variables ***
-${URL_ALL}      https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
-${URL}          https://www.linkedin.com  
-${BROWSER}  chrome
+${URL_ALL}          https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
+${URL}              https://www.linkedin.com  
+${BROWSER}          chrome
+${JOB_TITLE}        Test Engineer
+${JOB_LOCATION}     Finland
+${MIN_RESULTS}      1
 
 *** Test Cases ***
 
 Test Engineer Finland
     [Documentation] 
-    [Tags]    Smoke  Easy
-    Open Browser      ${URL_ALL}       ${BROWSER} 
+    [Tags]                        Smoke     Easy
+    Open Browser                  ${URL_ALL}       ${BROWSER} 
     Maximize Browser Window
     Sleep  3s
 
