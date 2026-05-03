@@ -32,3 +32,11 @@ Linkedin Page Loaded Successfully
     Title Should Be                jobs
     Page Should Contain Element    css:input[aria-label="Search by title, skill, or company"]
     Log                            LinkedIn page loaded successfully
+
+Job Search Returns Results
+    [Documentation]                Verify that at least one result returns from job search
+    [Tags]                         Smoke    LinkedIn    Jobs
+    ${count}=                      Get Job Results Count
+    Log                            Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}" 
+    Should Be True                 ${count}  >=  ${MIN_RESULTS}
+    ...    msg=Expected at least ${MIN_RESULTS} result(s), but got ${count}
