@@ -40,3 +40,10 @@ Job Search Returns Results
     Log                            Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}" 
     Should Be True                 ${count}  >=  ${MIN_RESULTS}
     ...    msg=Expected at least ${MIN_RESULTS} result(s), but got ${count}
+
+Accept LinkedIn Cookies
+    [Documentation]                Clicking and removing Cookie banner
+    [Tags]                         Smoke    LinkedIn    Jobs
+    Wait Until Element Is Visible  css:button[action-type="ACCEPT"]    timeout=5s
+    Click Element                  css:button[action-type="ACCEPT"] 
+    Log                            Cokkies accepted
