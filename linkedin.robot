@@ -41,9 +41,19 @@ Job Search Returns Results
     Should Be True                 ${count}  >=  ${MIN_RESULTS}
     ...    msg=Expected at least ${MIN_RESULTS} result(s), but got ${count}
 
+*** Keywords ***
+
+Open Browser and Load LinkedIn Page
+    [Documentation]                Opening a browser and navigate to LinkedIn page 
+    [Tags]                         Smoke    LinkedIn    Jobs
+    Open Browser                   ${URL}         
+    Maximize Browser Window
+    Run Keyword And Ignore Error  Accept LinkedIn Cookies
+
 Accept LinkedIn Cookies
     [Documentation]                Clicking and removing Cookie banner
     [Tags]                         Smoke    LinkedIn    Jobs
     Wait Until Element Is Visible  css:button[action-type="ACCEPT"]    timeout=5s
     Click Element                  css:button[action-type="ACCEPT"] 
-    Log                            Cokkies accepted
+    Log                            Cookies accepted
+
