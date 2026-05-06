@@ -57,3 +57,12 @@ Accept LinkedIn Cookies
     Click Element                  css:button[action-type="ACCEPT"] 
     Log                            Cookies accepted
 
+Fill In Job Title Search Field
+    [Documentation]    Clears and fills the job title input field.
+    ${title_field}=    Set Variable    css:input[aria-label="Search by title, skill, or company"]
+    Wait Until Element Is Visible    ${title_field}
+    Clear Element Text               ${title_field}
+    Click Element                    ${title_field}
+    Input Text                       ${title_field}    ${JOB_TITLE}
+    Log    Entered job title: ${JOB_TITLE}
+
