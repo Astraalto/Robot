@@ -9,12 +9,13 @@ Library     SeleniumLibrary     timeout=15s
 
 
 *** Variables ***
-${URL_ALL}          https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
-${URL}              https://www.linkedin.com  
-${BROWSER}          chrome
-${JOB_TITLE}        Test Engineer
-${JOB_LOCATION}     Finland
-${MIN_RESULTS}      1
+${URL_ALL}              https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
+${URL}                  https://www.linkedin.com  
+${BROWSER}              chrome
+${JOB_TITLE}            Test Engineer
+${JOB_LOCATION}         Finland
+${MIN_RESULTS}          1
+${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 
 *** Test Cases ***
 
@@ -66,3 +67,8 @@ Fill In Job Title Search Field
     Input Text                       ${title_field}    ${JOB_TITLE}
     Log    Entered job title: ${JOB_TITLE}
 
+Get Job Results Count
+    [Documentation]     Return number of job listing cards from results
+    ${elements}=        Get WebElements    ${JOB_CARD_SELECTOR}
+    ${count}=           Get Length         ${elements}
+    RETURN              ${count}
