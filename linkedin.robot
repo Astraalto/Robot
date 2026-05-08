@@ -16,6 +16,7 @@ ${JOB_TITLE}            Test Engineer
 ${JOB_LOCATION}         Finland
 ${MIN_RESULTS}          1
 ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
+${RESULTS_CONTAINER}    css:.jobs-search__results-list
 
 *** Test Cases ***
 
@@ -72,3 +73,8 @@ Get Job Results Count
     ${elements}=        Get WebElements    ${JOB_CARD_SELECTOR}
     ${count}=           Get Length         ${elements}
     RETURN              ${count}
+
+Wait Until Results Are Sorted
+    [Documentation]     Waits for the job results appear on the page
+    Wait Until Element Is Visible  ${RESULTS_CONTAINER}      timeout=20s
+    Sleep    1s     reason=Allow dynamic content to fully render
