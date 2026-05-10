@@ -78,3 +78,10 @@ Wait Until Results Are Sorted
     [Documentation]     Waits for the job results appear on the page
     Wait Until Element Is Visible  ${RESULTS_CONTAINER}      timeout=20s
     Sleep    1s     reason=Allow dynamic content to fully render
+
+Click Element Three Times
+    [Documentation]      Clciks the element three times to select all text
+    [Arguments]          ${locator}
+    Click Element        ${locator}
+    Click Element        ${locator}
+    Click Element        ${locator}  
