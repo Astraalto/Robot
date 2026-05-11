@@ -85,3 +85,9 @@ Click Element Three Times
     Click Element        ${locator}
     Click Element        ${locator}
     Click Element        ${locator}  
+
+Submit Job Search
+    [Documentation]      Execute searching by clicking Search button
+    ${location_field}=   Set Variable   css:input[aria-label="City, state, or zip code"]
+    Press Keys           ${location_field}     RETURN
+    Log                  Search form submitted
