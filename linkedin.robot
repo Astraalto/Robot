@@ -27,6 +27,15 @@ Test Engineer Finland
     Maximize Browser Window
     Sleep  3s
 
+Search For Test Engineer Jobs In Finland
+    [Documentation]               Enter the search criteria for Test Engineer positions 
+    [Tags]                        Smoke    LinkedIn    Jobs
+    Fill In Job Title Search Field
+    Fill In Location Search Field
+    Submit Job Search
+    Wait Until Results Are Loaded
+    Log                           Search submitted and results loaded
+
 Linkedin Page Loaded Successfully
     [Documentation]                Verify that page opened without issues
     [Tags]                         Smoke
