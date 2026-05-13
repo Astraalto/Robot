@@ -77,6 +77,14 @@ Fill In Job Title Search Field
     Input Text                       ${title_field}    ${JOB_TITLE}
     Log    Entered job title: ${JOB_TITLE}
 
+Fill In Location Search Field
+    [Documentation]  Clears and fills location search field
+    ${location_field}=    Set Variable   css:input[aria-label="City, state, or zip code"]
+    Wait Until Element Is Visible      ${location_field}
+    Click Element Three Times          ${location_field}
+    Input Text                         ${location_field}    ${JOB_LOCATION}
+    Log                                Enetered location:   ${JOB_LOCATION}
+
 Get Job Results Count
     [Documentation]     Return number of job listing cards from results
     ${elements}=        Get WebElements    ${JOB_CARD_SELECTOR}
