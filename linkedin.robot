@@ -54,12 +54,19 @@ Job Search Returns Results
 
 Job Listings Contain Relevant Keywords
     [Documentation]                Check that visible job offers are for Test Engineer or similar positions
-    [Tags]                         Verify   Linkedin    Jobs
+    [Tags]                         Verification   Linkedin    Jobs
     ${page_text}=        Get Text    ${RESULTS_CONTAINER}
     ${lower_text}=       Convert To Lower Case    ${page_text}
     Should Contain Any   ${lower_text}    test engineer    qa engineer    quality assurance
     ...    msg=No relevant job titles found in the results
 
+Job Listings Are Located In Finland
+    [Documentation]                Verify that job offers are in proper location
+    [Tags]                         Verification      linkedin     Dinland
+    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
+    ${lower_text}=       Convert To Lower Case    ${page_text}
+    Should Contain Any    ${lower_text}      finland   helsinki    espoo   tampere   turku    oulu
+    ...  msg= Finland-related locations found in the results
 
 
 *** Keywords ***
