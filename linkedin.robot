@@ -127,8 +127,14 @@ Submit Job Search
     Log                  Search form submitted
 
 Should Contain Any
-    [Documentation]
+    [Documentation]     Pass if the text contains at least on of the provided substrings
     [Arguments]          ${text}        @{substrings}
     ...                  msg=Text did not contain any of the expected substrings
     FOR    ${substrings}    IN   ${substrings}
-        
+        ${found}=   Run keyword ANd Return Status    Should Contain     ${text}      ${substring}
+        IF    ${found}
+               Log    Found expected keyword:   "${substring}"
+               RETURN
+        END
+    END
+    Fail     ${msg}:   ${substrings}
