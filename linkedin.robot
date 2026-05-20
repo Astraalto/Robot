@@ -58,7 +58,6 @@ Job Listings Contain Relevant Keywords
     ${page_text}=        Get Text    ${RESULTS_CONTAINER}
     ${lower_text}=       Evaluate    $page_text.lower()
     Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer    test automation
-    ...    No relevant job titles found in the results listing
 
 Job Listings Are Located In Finland
     [Documentation]                Verify that job offers are in proper location
@@ -128,7 +127,6 @@ Submit Job Search
 Should Contain Any
     [Documentation]    Passes if the given text contains at least one of the provided substrings.
     [Arguments]        ${text}    @{substrings}
-    ...            msg=Text did not contain any of the expected substrings
     FOR    ${substring}    IN    @{substrings}
         ${found}=    Run Keyword And Return Status    Should Contain    ${text}    ${substring}
         IF    ${found}
