@@ -18,55 +18,6 @@ ${MIN_RESULTS}          1
 ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
 
-*** Test Cases ***
-
-Test Engineer Finland
-    [Documentation] 
-    [Tags]                        Smoke     Easy
-    Open Browser                  ${URL_ALL}       ${BROWSER} 
-    Maximize Browser Window
-    Sleep  3s
-
-Search For Test Engineer Jobs In Finland
-    [Documentation]               Enter the search criteria for Test Engineer positions 
-    [Tags]                        Smoke    LinkedIn    Jobs
-    Fill In Job Title Search Field
-    Fill In Location Search Field
-    Submit Job Search
-    Wait Until Results Are Loaded
-    Log                           Search submitted and results loaded
-
-Linkedin Page Loaded Successfully
-    [Documentation]                Verify that page opened without issues
-    [Tags]                         Smoke
-    Open Browser                   ${URL}      ${BROWSER}
-    Title Should Be                jobs
-    Page Should Contain Element    css:input[aria-label="Search by title, skill, or company"]
-    Log                            LinkedIn page loaded successfully
-
-Job Search Returns Results
-    [Documentation]                Verify that at least one result returns from job search
-    [Tags]                         Smoke    LinkedIn    Jobs
-    ${count}=                      Get Job Results Count
-    Log                            Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}" 
-    Should Be True    ${count} >= ${MIN_RESULTS}
-    ...    Expected at least ${MIN_RESULTS} result(s), but got ${count}
-
-Job Listings Contain Relevant Keywords
-    [Documentation]                Check that visible job offers are for Test Engineer or similar positions
-    [Tags]                         Verification   Linkedin    Jobs
-    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
-    ${lower_text}=       Evaluate    $page_text.lower()
-    Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer    test automation
-
-Job Listings Are Located In Finland
-    [Documentation]                Verify that job offers are in proper location
-    [Tags]                         Verification      linkedin     Dinland
-    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
-    ${lower_text}=       Evaluate    $page_text.lower()
-    Should Contain Any    ${lower_text}    finland    helsinki    tampere    espoo    oulu    turku
-    
-
 *** Keywords ***
 
 Open Browser and Load LinkedIn Page
@@ -135,3 +86,52 @@ Should Contain Any
         END
     END
     Fail    None of the expected substrings were found in the text: ${substrings}
+
+*** Test Cases ***
+
+Test Engineer Finland
+    [Documentation] 
+    [Tags]                        Smoke     Easy
+    Open Browser                  ${URL_ALL}       ${BROWSER} 
+    Maximize Browser Window
+    Sleep  3s
+
+Search For Test Engineer Jobs In Finland
+    [Documentation]               Enter the search criteria for Test Engineer positions 
+    [Tags]                        Smoke    LinkedIn    Jobs
+    Fill In Job Title Search Field
+    Fill In Location Search Field
+    Submit Job Search
+    Wait Until Results Are Loaded
+    Log                           Search submitted and results loaded
+
+Linkedin Page Loaded Successfully
+    [Documentation]                Verify that page opened without issues
+    [Tags]                         Smoke
+    Open Browser                   ${URL}      ${BROWSER}
+    Title Should Be                jobs
+    Page Should Contain Element    css:input[aria-label="Search by title, skill, or company"]
+    Log                            LinkedIn page loaded successfully
+
+Job Search Returns Results
+    [Documentation]                Verify that at least one result returns from job search
+    [Tags]                         Smoke    LinkedIn    Jobs
+    ${count}=                      Get Job Results Count
+    Log                            Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}" 
+    Should Be True    ${count} >= ${MIN_RESULTS}
+    ...    Expected at least ${MIN_RESULTS} result(s), but got ${count}
+
+Job Listings Contain Relevant Keywords
+    [Documentation]                Check that visible job offers are for Test Engineer or similar positions
+    [Tags]                         Verification   Linkedin    Jobs
+    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
+    ${lower_text}=       Evaluate    $page_text.lower()
+    Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer    test automation
+
+Job Listings Are Located In Finland
+    [Documentation]                Verify that job offers are in proper location
+    [Tags]                         Verification      linkedin     Dinland
+    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
+    ${lower_text}=       Evaluate    $page_text.lower()
+    Should Contain Any    ${lower_text}    finland    helsinki    tampere    espoo    oulu    turku
+    
