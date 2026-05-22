@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-22T14:45:59.752164" rpa="false" schemaversion="5">
+<suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
+<test id="s1-t1" name="Test Engineer Finland" line="92">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:45:59.963872" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
+<arg>${URL_ALL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-22T14:45:59.963639" elapsed="3.378368"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-22T14:46:03.342469" elapsed="0.041216"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T14:46:06.384617" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T14:46:03.383980" elapsed="3.000745"/>
+</kw>
+<tag>Easy</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-05-22T14:45:59.962739" elapsed="6.422266"/>
+</test>
+<test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="99">
+<kw name="Fill In Job Title Search Field">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T14:46:06.386673" level="INFO">${title_field} = css:input[aria-label="Search by title, skill, or company"]</msg>
+<var>${title_field}</var>
+<arg>css:input[aria-label="Search by title, skill, or company"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T14:46:06.386461" elapsed="0.000251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:21.634745" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:21.634872" level="FAIL">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</msg>
+<arg>${title_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-05-22T14:46:06.386820" elapsed="15.277028">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${title_field}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.663999" elapsed="0.000035"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${title_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664101" elapsed="0.000018"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${title_field}</arg>
+<arg>${JOB_TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664175" elapsed="0.000018"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Entered job title: ${JOB_TITLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664254" elapsed="0.000018"/>
+</kw>
+<doc>Clears and fills the job title input field.</doc>
+<status status="FAIL" start="2026-05-22T14:46:06.386103" elapsed="15.278260">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+</kw>
+<kw name="Fill In Location Search Field">
+<doc>Clears and fills location search field</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664620" elapsed="0.000042"/>
+</kw>
+<kw name="Submit Job Search">
+<doc>Execute searching by clicking Search button</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664956" elapsed="0.000048"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.665223" elapsed="0.000040"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Search submitted and results loaded</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.665407" elapsed="0.000027"/>
+</kw>
+<doc>Enter the search criteria for Test Engineer positions</doc>
+<tag>Jobs</tag>
+<tag>LinkedIn</tag>
+<tag>Smoke</tag>
+<status status="FAIL" start="2026-05-22T14:46:06.385507" elapsed="15.280105">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+</test>
+<test id="s1-t3" name="Linkedin Page Loaded Successfully" line="108">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:21.666393" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-22T14:46:21.666228" elapsed="2.146334"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:23.944496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:23.944621" level="FAIL">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</msg>
+<arg>jobs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.812924" elapsed="0.143625">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</status>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<arg>css:input[aria-label="Search by title, skill, or company"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:23.956845" elapsed="0.000043"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>LinkedIn page loaded successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:23.957112" elapsed="0.000045"/>
+</kw>
+<doc>Verify that page opened without issues</doc>
+<tag>Smoke</tag>
+<status status="FAIL" start="2026-05-22T14:46:21.665946" elapsed="2.291513">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</status>
+</test>
+<test id="s1-t4" name="Job Search Returns Results" line="116">
+<kw name="Get Job Results Count">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:23.966387" level="INFO">${elements} = []</msg>
+<var>${elements}</var>
+<arg>${JOB_CARD_SELECTOR}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.959262" elapsed="0.007181"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.966749" level="INFO">Length is 0.</msg>
+<msg time="2026-05-22T14:46:23.966830" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${elements}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.966605" elapsed="0.000255"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2026-05-22T14:46:23.966925" elapsed="0.000065"/>
+</return>
+<msg time="2026-05-22T14:46:23.967160" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<doc>Return number of job listing cards from results</doc>
+<status status="PASS" start="2026-05-22T14:46:23.958939" elapsed="0.008254"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.967533" level="INFO">Found 0 job listing(s) for "Test Engineer" in "Finland"</msg>
+<arg>Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.967377" elapsed="0.000331"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.968474" level="FAIL">Expected at least 1 result(s), but got 0</msg>
+<arg>${count} &gt;= ${MIN_RESULTS}</arg>
+<arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.967981" elapsed="0.000572">Expected at least 1 result(s), but got 0</status>
+</kw>
+<doc>Verify that at least one result returns from job search</doc>
+<tag>Jobs</tag>
+<tag>LinkedIn</tag>
+<tag>Smoke</tag>
+<status status="FAIL" start="2026-05-22T14:46:23.958467" elapsed="0.010378">Expected at least 1 result(s), but got 0</status>
+</test>
+<test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="124">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:24.066002" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:24.066148" level="FAIL">Element with locator 'css:.jobs-search__results-list' not found.</msg>
+<var>${page_text}</var>
+<arg>${RESULTS_CONTAINER}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.969832" elapsed="0.127501">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${lower_text}</var>
+<arg>$page_text.lower()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:24.097638" elapsed="0.000044"/>
+</kw>
+<kw name="Should Contain Any">
+<arg>${lower_text}</arg>
+<arg>test engineer</arg>
+<arg>qa engineer</arg>
+<arg>quality engineer</arg>
+<arg>test automation</arg>
+<doc>Passes if the given text contains at least one of the provided substrings.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:24.098199" elapsed="0.000066"/>
+</kw>
+<doc>Check that visible job offers are for Test Engineer or similar positions</doc>
+<tag>Jobs</tag>
+<tag>Linkedin</tag>
+<tag>Verification</tag>
+<status status="FAIL" start="2026-05-22T14:46:23.969324" elapsed="0.129217">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</test>
+<test id="s1-t6" name="Job Listings Are Located In Finland" line="131">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:24.175234" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:24.175374" level="FAIL">Element with locator 'css:.jobs-search__results-list' not found.</msg>
+<var>${page_text}</var>
+<arg>${RESULTS_CONTAINER}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:24.099379" elapsed="0.076910">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${lower_text}</var>
+<arg>$page_text.lower()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:24.176522" elapsed="0.000031"/>
+</kw>
+<kw name="Should Contain Any">
+<arg>${lower_text}</arg>
+<arg>finland</arg>
+<arg>helsinki</arg>
+<arg>tampere</arg>
+<arg>espoo</arg>
+<arg>oulu</arg>
+<arg>turku</arg>
+<doc>Passes if the given text contains at least one of the provided substrings.</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:24.176847" elapsed="0.000033"/>
+</kw>
+<doc>Verify that job offers are in proper location</doc>
+<tag>Dinland</tag>
+<tag>linkedin</tag>
+<tag>Verification</tag>
+<status status="FAIL" start="2026-05-22T14:46:24.098945" elapsed="0.078126">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</test>
+<doc>pip install robotframework robotframework-seleniumlibrary
+ChromeDriver (or GeckoDriver) matching browser version</doc>
+<status status="FAIL" start="2026-05-22T14:45:59.753213" elapsed="24.424368"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Dinland</stat>
+<stat pass="1" fail="0" skip="0">Easy</stat>
+<stat pass="0" fail="3" skip="0">Jobs</stat>
+<stat pass="0" fail="4" skip="0">LinkedIn</stat>
+<stat pass="1" fail="3" skip="0">Smoke</stat>
+<stat pass="0" fail="2" skip="0">Verification</stat>
+</tag>
+<suite>
+<stat name="Linkedin" id="s1" pass="1" fail="5" skip="0">Linkedin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
