@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-24T20:39:23.971697" rpa="false" schemaversion="5">
 <suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
 <test id="s1-t1" name="Test Engineer Finland" line="94">
@@ -44,26 +45,80 @@
 <arg>${title_field}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
 <status status="FAIL" start="2026-05-24T20:39:30.550625" elapsed="15.279573">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+=======
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-22T14:45:59.752164" rpa="false" schemaversion="5">
+<suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
+<test id="s1-t1" name="Test Engineer Finland" line="92">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:45:59.963872" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
+<arg>${URL_ALL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-22T14:45:59.963639" elapsed="3.378368"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-22T14:46:03.342469" elapsed="0.041216"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-22T14:46:06.384617" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-22T14:46:03.383980" elapsed="3.000745"/>
+</kw>
+<tag>Easy</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-05-22T14:45:59.962739" elapsed="6.422266"/>
+</test>
+<test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="99">
+<kw name="Fill In Job Title Search Field">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-22T14:46:06.386673" level="INFO">${title_field} = css:input[aria-label="Search by title, skill, or company"]</msg>
+<var>${title_field}</var>
+<arg>css:input[aria-label="Search by title, skill, or company"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-22T14:46:06.386461" elapsed="0.000251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:21.634745" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:21.634872" level="FAIL">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</msg>
+<arg>${title_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-05-22T14:46:06.386820" elapsed="15.277028">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:45.830334" elapsed="0.000027"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:21.663999" elapsed="0.000035"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Click the element identified by ``locator``.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:45.830427" elapsed="0.000018"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:21.664101" elapsed="0.000018"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <arg>${JOB_TITLE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:45.830502" elapsed="0.000017"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:21.664175" elapsed="0.000018"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Entered job title: ${JOB_TITLE}</arg>
 <doc>Logs the given message with the given level.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:45.830583" elapsed="0.000018"/>
 </kw>
 <doc>Clears and fills the job title input field.</doc>
@@ -80,16 +135,39 @@
 <kw name="Wait Until Results Are Loaded">
 <doc>Waits for the job results appear on the page</doc>
 <status status="NOT RUN" start="2026-05-24T20:39:45.831684" elapsed="0.000037"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:21.664254" elapsed="0.000018"/>
+</kw>
+<doc>Clears and fills the job title input field.</doc>
+<status status="FAIL" start="2026-05-22T14:46:06.386103" elapsed="15.278260">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+</kw>
+<kw name="Fill In Location Search Field">
+<doc>Clears and fills location search field</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664620" elapsed="0.000042"/>
+</kw>
+<kw name="Submit Job Search">
+<doc>Execute searching by clicking Search button</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.664956" elapsed="0.000048"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-05-22T14:46:21.665223" elapsed="0.000040"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>Search submitted and results loaded</arg>
 <doc>Logs the given message with the given level.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:45.831912" elapsed="0.000033"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:21.665407" elapsed="0.000027"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <doc>Enter the search criteria for Test Engineer positions</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
+<<<<<<< HEAD
 <status status="FAIL" start="2026-05-24T20:39:30.549594" elapsed="15.282557">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
 </test>
 <test id="s1-t3" name="Linkedin Page Loaded Successfully" line="111">
@@ -106,15 +184,38 @@
 <arg>jobs</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
 <status status="FAIL" start="2026-05-24T20:39:48.160241" elapsed="0.143693">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</status>
+=======
+<status status="FAIL" start="2026-05-22T14:46:06.385507" elapsed="15.280105">Element 'css:input[aria-label="Search by title, skill, or company"]' not visible after 15 seconds.</status>
+</test>
+<test id="s1-t3" name="Linkedin Page Loaded Successfully" line="108">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:21.666393" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-22T14:46:21.666228" elapsed="2.146334"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:23.944496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:23.944621" level="FAIL">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</msg>
+<arg>jobs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.812924" elapsed="0.143625">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</status>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
 <arg>css:input[aria-label="Search by title, skill, or company"]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.304252" elapsed="0.000057"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:23.956845" elapsed="0.000043"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>LinkedIn page loaded successfully</arg>
 <doc>Logs the given message with the given level.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.304531" elapsed="0.000037"/>
 </kw>
 <doc>Verify that page opened without issues</doc>
@@ -159,11 +260,58 @@
 <arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
 <doc>Fails if the given condition is not true.</doc>
 <status status="FAIL" start="2026-05-24T20:39:48.313081" elapsed="0.000383">Expected at least 1 result(s), but got 0</status>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:23.957112" elapsed="0.000045"/>
+</kw>
+<doc>Verify that page opened without issues</doc>
+<tag>Smoke</tag>
+<status status="FAIL" start="2026-05-22T14:46:21.665946" elapsed="2.291513">Title should have been 'jobs' but was 'LinkedIn: Kirjaudu sisään tai rekisteröidy'.</status>
+</test>
+<test id="s1-t4" name="Job Search Returns Results" line="116">
+<kw name="Get Job Results Count">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:23.966387" level="INFO">${elements} = []</msg>
+<var>${elements}</var>
+<arg>${JOB_CARD_SELECTOR}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.959262" elapsed="0.007181"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.966749" level="INFO">Length is 0.</msg>
+<msg time="2026-05-22T14:46:23.966830" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<arg>${elements}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.966605" elapsed="0.000255"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2026-05-22T14:46:23.966925" elapsed="0.000065"/>
+</return>
+<msg time="2026-05-22T14:46:23.967160" level="INFO">${count} = 0</msg>
+<var>${count}</var>
+<doc>Return number of job listing cards from results</doc>
+<status status="PASS" start="2026-05-22T14:46:23.958939" elapsed="0.008254"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.967533" level="INFO">Found 0 job listing(s) for "Test Engineer" in "Finland"</msg>
+<arg>Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-22T14:46:23.967377" elapsed="0.000331"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2026-05-22T14:46:23.968474" level="FAIL">Expected at least 1 result(s), but got 0</msg>
+<arg>${count} &gt;= ${MIN_RESULTS}</arg>
+<arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.967981" elapsed="0.000572">Expected at least 1 result(s), but got 0</status>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <doc>Verify that at least one result returns from job search</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
+<<<<<<< HEAD
 <status status="FAIL" start="2026-05-24T20:39:48.305207" elapsed="0.008506">Expected at least 1 result(s), but got 0</status>
 </test>
 <test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="127">
@@ -174,12 +322,28 @@
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
 <status status="FAIL" start="2026-05-24T20:39:48.314620" elapsed="0.122338">Element with locator 'css:.jobs-search__results-list' not found.</status>
+=======
+<status status="FAIL" start="2026-05-22T14:46:23.958467" elapsed="0.010378">Expected at least 1 result(s), but got 0</status>
+</test>
+<test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="124">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:24.066002" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:24.066148" level="FAIL">Element with locator 'css:.jobs-search__results-list' not found.</msg>
+<var>${page_text}</var>
+<arg>${RESULTS_CONTAINER}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:23.969832" elapsed="0.127501">Element with locator 'css:.jobs-search__results-list' not found.</status>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.437232" elapsed="0.000037"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:24.097638" elapsed="0.000044"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Should Contain Any">
 <arg>${lower_text}</arg>
@@ -188,12 +352,17 @@
 <arg>quality engineer</arg>
 <arg>test automation</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.437600" elapsed="0.000043"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:24.098199" elapsed="0.000066"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <doc>Check that visible job offers are for Test Engineer or similar positions</doc>
 <tag>Jobs</tag>
 <tag>Linkedin</tag>
 <tag>Verification</tag>
+<<<<<<< HEAD
 <status status="FAIL" start="2026-05-24T20:39:48.314177" elapsed="0.123675">Element with locator 'css:.jobs-search__results-list' not found.</status>
 </test>
 <test id="s1-t6" name="Job Listings Are Located In Finland" line="134">
@@ -204,12 +373,28 @@
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
 <status status="FAIL" start="2026-05-24T20:39:48.438743" elapsed="0.084773">Element with locator 'css:.jobs-search__results-list' not found.</status>
+=======
+<status status="FAIL" start="2026-05-22T14:46:23.969324" elapsed="0.129217">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</test>
+<test id="s1-t6" name="Job Listings Are Located In Finland" line="131">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-05-22T14:46:24.175234" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-22T14:46:24.175374" level="FAIL">Element with locator 'css:.jobs-search__results-list' not found.</msg>
+<var>${page_text}</var>
+<arg>${RESULTS_CONTAINER}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-22T14:46:24.099379" elapsed="0.076910">Element with locator 'css:.jobs-search__results-list' not found.</status>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.523814" elapsed="0.000067"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:24.176522" elapsed="0.000031"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <kw name="Should Contain Any">
 <arg>${lower_text}</arg>
@@ -220,17 +405,29 @@
 <arg>oulu</arg>
 <arg>turku</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
+<<<<<<< HEAD
 <status status="NOT RUN" start="2026-05-24T20:39:48.524272" elapsed="0.000038"/>
+=======
+<status status="NOT RUN" start="2026-05-22T14:46:24.176847" elapsed="0.000033"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </kw>
 <doc>Verify that job offers are in proper location</doc>
 <tag>Dinland</tag>
 <tag>linkedin</tag>
 <tag>Verification</tag>
+<<<<<<< HEAD
 <status status="FAIL" start="2026-05-24T20:39:48.438275" elapsed="0.086275">Element with locator 'css:.jobs-search__results-list' not found.</status>
 </test>
 <doc>pip install robotframework robotframework-seleniumlibrary
 ChromeDriver (or GeckoDriver) matching browser version</doc>
 <status status="FAIL" start="2026-05-24T20:39:23.972775" elapsed="24.552389"/>
+=======
+<status status="FAIL" start="2026-05-22T14:46:24.098945" elapsed="0.078126">Element with locator 'css:.jobs-search__results-list' not found.</status>
+</test>
+<doc>pip install robotframework robotframework-seleniumlibrary
+ChromeDriver (or GeckoDriver) matching browser version</doc>
+<status status="FAIL" start="2026-05-22T14:45:59.753213" elapsed="24.424368"/>
+>>>>>>> fe6fe8ded6be18868931bdd61515e31deda1e496
 </suite>
 <statistics>
 <total>
