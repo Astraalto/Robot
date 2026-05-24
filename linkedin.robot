@@ -17,6 +17,8 @@ ${JOB_LOCATION}         Finland
 ${MIN_RESULTS}          1
 ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
+${ACCEPT}               css:#artdeco-global-alert-container > div > section > div > div.artdeco-global-alert-action__wrapper > button:nth-child(1)
+${CLOSE WINDOW}         css:#base-contextual-sign-in-modal > div > section > button > icon > svg > path
 
 *** Keywords ***
 
@@ -30,8 +32,8 @@ Open Browser and Load LinkedIn Page
 Accept LinkedIn Cookies
     [Documentation]                Clicking and removing Cookie banner
     [Tags]                         Smoke    LinkedIn    Jobs
-    Wait Until Element Is Visible  css:button[action-type="ACCEPT"]    timeout=5s
-    Click Element                  css:button[action-type="ACCEPT"] 
+    Wait Until Element Is Visible  ${ACCEPT}     timeout=5s
+    Click Element                  ${ACCEPT}  
     Log                            Cookies accepted
 
 Fill In Job Title Search Field
@@ -94,6 +96,7 @@ Test Engineer Finland
     [Tags]                        Smoke     Easy
     Open Browser                  ${URL_ALL}       ${BROWSER} 
     Maximize Browser Window
+    Click Element                 ${CLOSE WINDOW}
     Sleep  3s
 
 Search For Test Engineer Jobs In Finland
