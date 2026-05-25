@@ -38,7 +38,7 @@ Accept LinkedIn Cookies
 
 Fill In Job Title Search Field
     [Documentation]    Clears and fills the job title input field.
-    ${title_field}=    Set Variable    css:input[aria-label="Search by title, skill, or company"]
+    ${title_field}=    Set Variable    css:#\:r1d\:
     Wait Until Element Is Visible    ${title_field}
     Clear Element Text               ${title_field}
     Click Element                    ${title_field}
@@ -47,7 +47,7 @@ Fill In Job Title Search Field
 
 Fill In Location Search Field
     [Documentation]  Clears and fills location search field
-    ${location_field}=    Set Variable   css:input[aria-label="City, state, or zip code"]
+    ${location_field}=    Set Variable   css:#\:r1d\:
     Wait Until Element Is Visible      ${location_field}
     Click Element Three Times          ${location_field}
     Input Text                         ${location_field}    ${JOB_LOCATION}
