@@ -10,14 +10,14 @@ Library     SeleniumLibrary     timeout=15s
 
 *** Variables ***
 ${URL_ALL}              https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
-${URL}                  https://www.linkedin.com  
+${URL}                  https://www.linkedin.com/jobs/search?keywords=&location=Finland&geoId=100456013&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0
 ${BROWSER}              chrome
 ${JOB_TITLE}            Test Engineer
 ${JOB_LOCATION}         Finland
 ${MIN_RESULTS}          1
 ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
-${ACCEPT}               css:#artdeco-global-alert-container > div > section > div > div.artdeco-global-alert-action__wrapper > button:nth-child(1)
+${ACCEPT}               css:button.artdeco-global-alert-action:nth-child(1)
 ${CLOSE WINDOW}         css:#base-contextual-sign-in-modal > div > section > button > icon > svg > path
 
 *** Keywords ***
@@ -38,7 +38,7 @@ Accept LinkedIn Cookies
 
 Fill In Job Title Search Field
     [Documentation]    Clears and fills the job title input field.
-    ${title_field}=    Set Variable    css:#\:r1d\:
+    ${title_field}=    Set Variable    css:#job-search-bar-keywords
     Wait Until Element Is Visible    ${title_field}
     Clear Element Text               ${title_field}
     Click Element                    ${title_field}
@@ -47,7 +47,7 @@ Fill In Job Title Search Field
 
 Fill In Location Search Field
     [Documentation]  Clears and fills location search field
-    ${location_field}=    Set Variable   css:#\:r1d\:
+    ${location_field}=    Set Variable   css:#job-search-bar-location
     Wait Until Element Is Visible      ${location_field}
     Click Element Three Times          ${location_field}
     Input Text                         ${location_field}    ${JOB_LOCATION}
@@ -73,7 +73,7 @@ Click Element Three Times
 
 Submit Job Search
     [Documentation]      Execute searching by clicking Search button
-    ${location_field}=   Set Variable   css:input[aria-label="City, state, or zip code"]
+    ${location_field}=   Set Variable   css:#job-search-bar-location
     Press Keys           ${location_field}     RETURN
     Log                  Search form submitted
 
@@ -113,7 +113,7 @@ Linkedin Page Loaded Successfully
     [Tags]                         Smoke
     Open Browser                   ${URL}      ${BROWSER}
     Title Should Be                jobs
-    Page Should Contain Element    css:input[aria-label="Search by title, skill, or company"]
+    Page Should Contain Element    css:.switcher-tabs__placeholder-text
     Log                            LinkedIn page loaded successfully
 
 Job Search Returns Results
