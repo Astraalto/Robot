@@ -19,6 +19,7 @@ ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
 ${ACCEPT}               css:button.artdeco-global-alert-action:nth-child(1)
 ${CLOSE WINDOW}         css:#base-contextual-sign-in-modal > div > section > button > icon > svg > path
+${CLOSE_SIGNIN}         css:.modal__overlay--visible > section:nth-child(1) > button:nth-child(1) > icon:nth-child(1) > svg:nth-child(1)
 
 *** Keywords ***
 
@@ -39,6 +40,7 @@ Accept LinkedIn Cookies
 Fill In Job Title Search Field
     [Documentation]    Clears and fills the job title input field.
     ${title_field}=    Set Variable    css:#job-search-bar-keywords
+    Click Element                    ${CLOSE_SIGNIN} 
     Wait Until Element Is Visible    ${title_field}
     Clear Element Text               ${title_field}
     Click Element                    ${title_field}
@@ -48,6 +50,7 @@ Fill In Job Title Search Field
 Fill In Location Search Field
     [Documentation]  Clears and fills location search field
     ${location_field}=    Set Variable   css:#job-search-bar-location
+    Click Element                      ${CLOSE_SIGNIN} 
     Wait Until Element Is Visible      ${location_field}
     Click Element Three Times          ${location_field}
     Input Text                         ${location_field}    ${JOB_LOCATION}
@@ -112,7 +115,7 @@ Linkedin Page Loaded Successfully
     [Documentation]                Verify that page opened without issues
     [Tags]                         Smoke
     Open Browser                   ${URL}      ${BROWSER}
-    Title Should Be                jobs
+    Title Should Be                6 000 + työpaikat Finland
     Page Should Contain Element    css:.switcher-tabs__placeholder-text
     Log                            LinkedIn page loaded successfully
 
