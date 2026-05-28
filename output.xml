@@ -1,179 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-27T23:54:12.391102" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-28T21:37:38.089853" rpa="false" schemaversion="5">
 <suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
 <test id="s1-t1" name="Test Engineer Finland" line="97">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:12.528200" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
+<msg time="2026-05-28T21:37:38.235784" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
 <arg>${URL_ALL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-27T23:54:12.528005" elapsed="2.502000"/>
+<status status="PASS" start="2026-05-28T21:37:38.235577" elapsed="2.626843"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-05-27T23:54:15.030413" elapsed="0.048768"/>
+<status status="PASS" start="2026-05-28T21:37:40.862803" elapsed="0.061766"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:15.079735" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
+<msg time="2026-05-28T21:37:40.925303" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
 <arg>${CLOSE WINDOW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-27T23:54:15.079439" elapsed="0.607728"/>
+<status status="PASS" start="2026-05-28T21:37:40.924879" elapsed="0.414774"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-27T23:54:18.688207" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-05-28T21:37:44.340147" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-27T23:54:15.687483" elapsed="3.000825"/>
+<status status="PASS" start="2026-05-28T21:37:41.339911" elapsed="3.000334"/>
 </kw>
 <tag>Easy</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-05-27T23:54:12.527287" elapsed="6.161332"/>
+<status status="PASS" start="2026-05-28T21:37:38.234845" elapsed="6.105726"/>
 </test>
 <test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="105">
 <kw name="Fill In Job Title Search Field">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-27T23:54:18.690214" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
+<msg time="2026-05-28T21:37:44.342030" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
 <var>${title_field}</var>
 <arg>css:#job-search-bar-keywords</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-27T23:54:18.690050" elapsed="0.000201"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:18.691489" level="INFO">Clicking element 'css:.modal__overlay--visible &gt; section:nth-child(1) &gt; button:nth-child(1) &gt; icon:nth-child(1) &gt; svg:nth-child(1)'.</msg>
-<msg time="2026-05-27T23:54:18.781759" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-05-27T23:54:18.781944" level="FAIL">Element with locator 'css:.modal__overlay--visible &gt; section:nth-child(1) &gt; button:nth-child(1) &gt; icon:nth-child(1) &gt; svg:nth-child(1)' not found.</msg>
-<arg>${CLOSE_SIGNIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2026-05-27T23:54:18.690359" elapsed="0.093697">Element with locator 'css:.modal__overlay--visible &gt; section:nth-child(1) &gt; button:nth-child(1) &gt; icon:nth-child(1) &gt; svg:nth-child(1)' not found.</status>
+<status status="PASS" start="2026-05-28T21:37:44.341856" elapsed="0.000198"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.784233" elapsed="0.000033"/>
+<status status="PASS" start="2026-05-28T21:37:44.342155" elapsed="0.016176"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.784348" elapsed="0.000023"/>
+<status status="PASS" start="2026-05-28T21:37:44.358477" elapsed="0.023480"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.382301" level="INFO">Clicking element 'css:#job-search-bar-keywords'.</msg>
 <arg>${title_field}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.784444" elapsed="0.000021"/>
+<status status="PASS" start="2026-05-28T21:37:44.382114" elapsed="0.037812"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.420323" level="INFO">Typing text 'Test Engineer' into text field 'css:#job-search-bar-keywords'.</msg>
 <arg>${title_field}</arg>
 <arg>${JOB_TITLE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.784524" elapsed="0.000019"/>
+<status status="PASS" start="2026-05-28T21:37:44.420099" elapsed="0.037049"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
+<msg time="2026-05-28T21:37:44.457462" level="INFO">Entered job title: Test Engineer</msg>
 <arg>Entered job title: ${JOB_TITLE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.784609" elapsed="0.000018"/>
+<status status="PASS" start="2026-05-28T21:37:44.457303" elapsed="0.000201"/>
 </kw>
 <doc>Clears and fills the job title input field.</doc>
-<status status="FAIL" start="2026-05-27T23:54:18.689709" elapsed="0.095013">Element with locator 'css:.modal__overlay--visible &gt; section:nth-child(1) &gt; button:nth-child(1) &gt; icon:nth-child(1) &gt; svg:nth-child(1)' not found.</status>
+<status status="PASS" start="2026-05-28T21:37:44.341616" elapsed="0.115957"/>
 </kw>
 <kw name="Fill In Location Search Field">
-<doc>Clears and fills location search field</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.785027" elapsed="0.000032"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-28T21:37:44.458117" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<var>${location_field}</var>
+<arg>css:#job-search-bar-location</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.458019" elapsed="0.000119"/>
 </kw>
-<kw name="Submit Job Search">
-<doc>Execute searching by clicking Search button</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.785353" elapsed="0.000041"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${location_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.458210" elapsed="0.010197"/>
 </kw>
-<kw name="Wait Until Results Are Loaded">
-<doc>Waits for the job results appear on the page</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.785629" elapsed="0.000044"/>
+<kw name="Click Element Three Times">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.469025" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.468871" elapsed="0.049328"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.518570" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.518348" elapsed="0.033953"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.552603" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.552433" elapsed="0.030863"/>
+</kw>
+<arg>${location_field}</arg>
+<doc>Clciks the element three times to select all text</doc>
+<status status="PASS" start="2026-05-28T21:37:44.468611" elapsed="0.114765"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.583654" level="INFO">Typing text 'Finland' into text field 'css:#job-search-bar-location'.</msg>
+<arg>${location_field}</arg>
+<arg>${JOB_LOCATION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.583473" elapsed="0.041652"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
+<msg time="2026-05-28T21:37:44.625393" level="INFO">Enetered location: Finland</msg>
+<arg>Enetered location: ${JOB_LOCATION}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.625258" elapsed="0.000172"/>
+</kw>
+<doc>Clears and fills location search field</doc>
+<status status="PASS" start="2026-05-28T21:37:44.457827" elapsed="0.167658"/>
+</kw>
+<kw name="Submit Job Search">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-28T21:37:44.625954" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<var>${location_field}</var>
+<arg>css:#job-search-bar-location</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.625857" elapsed="0.000117"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-05-28T21:37:44.626334" level="INFO">Sending key(s) ('RETURN',) to css:#job-search-bar-location element.</msg>
+<msg time="2026-05-28T21:37:44.896653" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-05-28T21:37:44.896720" level="INFO">Releasing special key RETURN.</msg>
+<arg>${location_field}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-05-28T21:37:44.626049" elapsed="1.333185"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-28T21:37:45.959588" level="INFO">Search form submitted</msg>
+<arg>Search form submitted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-28T21:37:45.959437" elapsed="0.000218"/>
+</kw>
+<doc>Execute searching by clicking Search button</doc>
+<status status="PASS" start="2026-05-28T21:37:44.625685" elapsed="1.334062"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RESULTS_CONTAINER}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-28T21:37:45.960429" elapsed="0.054549"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-28T21:37:47.015674" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-28T21:37:47.015753" level="INFO">Allow dynamic content to fully render</msg>
+<arg>1s</arg>
+<arg>reason=Allow dynamic content to fully render</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-28T21:37:46.015292" elapsed="1.000519"/>
+</kw>
+<doc>Waits for the job results appear on the page</doc>
+<status status="PASS" start="2026-05-28T21:37:45.960129" elapsed="1.055782"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-28T21:37:47.016273" level="INFO">Search submitted and results loaded</msg>
 <arg>Search submitted and results loaded</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:18.785869" elapsed="0.000035"/>
+<status status="PASS" start="2026-05-28T21:37:47.016132" elapsed="0.000188"/>
 </kw>
 <doc>Enter the search criteria for Test Engineer positions</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="FAIL" start="2026-05-27T23:54:18.689100" elapsed="0.097014">Element with locator 'css:.modal__overlay--visible &gt; section:nth-child(1) &gt; button:nth-child(1) &gt; icon:nth-child(1) &gt; svg:nth-child(1)' not found.</status>
+<status status="PASS" start="2026-05-28T21:37:44.341113" elapsed="2.675383"/>
 </test>
 <test id="s1-t3" name="Linkedin Page Loaded Successfully" line="114">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:18.787228" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
+<msg time="2026-05-28T21:37:47.017345" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-27T23:54:18.786985" elapsed="2.434746"/>
+<status status="PASS" start="2026-05-28T21:37:47.017188" elapsed="2.373530"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:21.728274" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-40.png"&gt;&lt;img src="selenium-screenshot-40.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-05-27T23:54:21.728436" level="FAIL">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</msg>
+<msg time="2026-05-28T21:37:49.819007" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-28T21:37:49.819148" level="FAIL">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</msg>
 <arg>6 000 + työpaikat Finland</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.222021" elapsed="0.507429">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
+<status status="FAIL" start="2026-05-28T21:37:49.391005" elapsed="0.429358">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
 <arg>css:.switcher-tabs__placeholder-text</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.729777" elapsed="0.000049"/>
+<status status="NOT RUN" start="2026-05-28T21:37:49.820665" elapsed="0.000037"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
 <arg>LinkedIn page loaded successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.730109" elapsed="0.000053"/>
+<status status="NOT RUN" start="2026-05-28T21:37:49.820885" elapsed="0.000032"/>
 </kw>
 <doc>Verify that page opened without issues</doc>
 <tag>Smoke</tag>
-<status status="FAIL" start="2026-05-27T23:54:18.786555" elapsed="2.943850">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
+<status status="FAIL" start="2026-05-28T21:37:47.016833" elapsed="2.804331">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
 </test>
 <test id="s1-t4" name="Job Search Returns Results" line="122">
 <kw name="Get Job Results Count">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:21.740793" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="04d0d2bba84e77598fea137d44b30de9", element="f.A8F4BA1647C2BFE1753CA049D9C2A826.d.C60F2A5807FD8169ACAB0EAFFA965E0A.e.154")&gt;, &lt;selenium.webdri...</msg>
+<msg time="2026-05-28T21:37:49.830113" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="10df4f6a9d84fee3635f4585fb0006de", element="f.C0C9D3ADB12D6A4FE92EDB5D5B4FB2DC.d.98F9E566D8E913244CA93AB62320428C.e.152")&gt;, &lt;selenium.webdri...</msg>
 <var>${elements}</var>
 <arg>${JOB_CARD_SELECTOR}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.731652" elapsed="0.009311"/>
+<status status="PASS" start="2026-05-28T21:37:49.822309" elapsed="0.007839"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.741282" level="INFO">Length is 60.</msg>
-<msg time="2026-05-27T23:54:21.741359" level="INFO">${count} = 60</msg>
+<msg time="2026-05-28T21:37:49.830356" level="INFO">Length is 60.</msg>
+<msg time="2026-05-28T21:37:49.830418" level="INFO">${count} = 60</msg>
 <var>${count}</var>
 <arg>${elements}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.741129" elapsed="0.000259"/>
+<status status="PASS" start="2026-05-28T21:37:49.830247" elapsed="0.000193"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2026-05-27T23:54:21.741451" elapsed="0.000061"/>
+<status status="PASS" start="2026-05-28T21:37:49.830492" elapsed="0.000048"/>
 </return>
-<msg time="2026-05-27T23:54:21.741669" level="INFO">${count} = 60</msg>
+<msg time="2026-05-28T21:37:49.830657" level="INFO">${count} = 60</msg>
 <var>${count}</var>
 <doc>Return number of job listing cards from results</doc>
-<status status="PASS" start="2026-05-27T23:54:21.731382" elapsed="0.010320"/>
+<status status="PASS" start="2026-05-28T21:37:49.822130" elapsed="0.008549"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.742184" level="INFO">Found 60 job listing(s) for "Test Engineer" in "Finland"</msg>
+<msg time="2026-05-28T21:37:49.831155" level="INFO">Found 60 job listing(s) for "Test Engineer" in "Finland"</msg>
 <arg>Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.741939" elapsed="0.000310"/>
+<status status="PASS" start="2026-05-28T21:37:49.830922" elapsed="0.000293"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${count} &gt;= ${MIN_RESULTS}</arg>
 <arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.742503" elapsed="0.000405"/>
+<status status="PASS" start="2026-05-28T21:37:49.831459" elapsed="0.000381"/>
 </kw>
 <doc>Verify that at least one result returns from job search</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-05-27T23:54:21.730880" elapsed="0.012207"/>
+<status status="PASS" start="2026-05-28T21:37:49.821672" elapsed="0.010372"/>
 </test>
 <test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="130">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:21.895841" level="INFO">${page_text} = Sales Assistant
+<msg time="2026-05-28T21:37:50.044721" level="INFO">${page_text} = Sales Assistant
 Sales Assistant
 ZARA
 Helsinki
@@ -184,10 +264,10 @@ Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.744029" elapsed="0.151868"/>
+<status status="PASS" start="2026-05-28T21:37:49.832848" elapsed="0.211940"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.896589" level="INFO">${lower_text} = sales assistant
+<msg time="2026-05-28T21:37:50.045488" level="INFO">${lower_text} = sales assistant
 sales assistant
 zara
 helsinki
@@ -198,14 +278,14 @@ helsinki cabin crew opportunities (dubai based, relocation provided)
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.896232" elapsed="0.000399"/>
+<status status="PASS" start="2026-05-28T21:37:50.045175" elapsed="0.000342"/>
 </kw>
 <kw name="Should Contain Any">
 <for flavor="IN">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.898320" level="FAIL">'sales assistant
+<msg time="2026-05-28T21:37:50.046946" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
@@ -224,7 +304,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -234,11 +313,12 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'test engineer'</msg>
+tampere
+ole varhainen hakija' does not contain 'test engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.898046" elapsed="0.000383">'sales assistant
+<status status="FAIL" start="2026-05-28T21:37:50.046715" elapsed="0.000333">'sales assistant
 sales assistant
 zara
 helsinki
@@ -257,7 +337,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -267,37 +346,38 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'test engineer'</status>
+tampere
+ole varhainen hakija' does not contain 'test engineer'</status>
 </kw>
-<msg time="2026-05-27T23:54:21.898642" level="INFO">${found} = False</msg>
+<msg time="2026-05-28T21:37:50.047270" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.897867" elapsed="0.000813"/>
+<status status="PASS" start="2026-05-28T21:37:50.046573" elapsed="0.000725"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.899024" elapsed="0.000036"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.047545" elapsed="0.000025"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.899121" elapsed="0.000034"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.047618" elapsed="0.000027"/>
 </return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.898834" elapsed="0.000377"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.047416" elapsed="0.000269"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:21.898795" elapsed="0.000468"/>
+<status status="PASS" start="2026-05-28T21:37:50.047389" elapsed="0.000334"/>
 </if>
 <var name="${substring}">test engineer</var>
-<status status="PASS" start="2026-05-27T23:54:21.897723" elapsed="0.001579"/>
+<status status="PASS" start="2026-05-28T21:37:50.046449" elapsed="0.001300"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.900003" level="FAIL">'sales assistant
+<msg time="2026-05-28T21:37:50.048279" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
@@ -316,7 +396,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -326,11 +405,12 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'qa engineer'</msg>
+tampere
+ole varhainen hakija' does not contain 'qa engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.899772" elapsed="0.000328">'sales assistant
+<status status="FAIL" start="2026-05-28T21:37:50.048082" elapsed="0.000275">'sales assistant
 sales assistant
 zara
 helsinki
@@ -349,7 +429,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -359,37 +438,38 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'qa engineer'</status>
+tampere
+ole varhainen hakija' does not contain 'qa engineer'</status>
 </kw>
-<msg time="2026-05-27T23:54:21.900212" level="INFO">${found} = False</msg>
+<msg time="2026-05-28T21:37:50.048461" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.899610" elapsed="0.000643"/>
+<status status="PASS" start="2026-05-28T21:37:50.047965" elapsed="0.000519"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.900454" elapsed="0.000124"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.048676" elapsed="0.000023"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.900642" elapsed="0.000029"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.048745" elapsed="0.000022"/>
 </return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.900343" elapsed="0.000357"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.048566" elapsed="0.000235"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:21.900327" elapsed="0.000402"/>
+<status status="PASS" start="2026-05-28T21:37:50.048546" elapsed="0.000290"/>
 </if>
 <var name="${substring}">qa engineer</var>
-<status status="PASS" start="2026-05-27T23:54:21.899500" elapsed="0.001248"/>
+<status status="PASS" start="2026-05-28T21:37:50.047882" elapsed="0.000978"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.901299" level="FAIL">'sales assistant
+<msg time="2026-05-28T21:37:50.049373" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
@@ -408,7 +488,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -418,11 +497,12 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'quality engineer'</msg>
+tampere
+ole varhainen hakija' does not contain 'quality engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.901104" elapsed="0.000265">'sales assistant
+<status status="FAIL" start="2026-05-28T21:37:50.049182" elapsed="0.000268">'sales assistant
 sales assistant
 zara
 helsinki
@@ -441,7 +521,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -451,37 +530,38 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'quality engineer'</status>
+tampere
+ole varhainen hakija' does not contain 'quality engineer'</status>
 </kw>
-<msg time="2026-05-27T23:54:21.901465" level="INFO">${found} = False</msg>
+<msg time="2026-05-28T21:37:50.049557" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.900972" elapsed="0.000524"/>
+<status status="PASS" start="2026-05-28T21:37:50.049065" elapsed="0.000518"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.901691" elapsed="0.000022"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.049780" elapsed="0.000027"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.901750" elapsed="0.000029"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.049857" elapsed="0.000024"/>
 </return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.901576" elapsed="0.000244"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.049665" elapsed="0.000247"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:21.901557" elapsed="0.000300"/>
+<status status="PASS" start="2026-05-28T21:37:50.049648" elapsed="0.000299"/>
 </if>
 <var name="${substring}">quality engineer</var>
-<status status="PASS" start="2026-05-27T23:54:21.900884" elapsed="0.000997"/>
+<status status="PASS" start="2026-05-28T21:37:50.048989" elapsed="0.000983"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.902406" level="FAIL">'sales assistant
+<msg time="2026-05-28T21:37:50.050525" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
@@ -500,7 +580,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -510,11 +589,12 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'test automation'</msg>
+tampere
+ole varhainen hakija' does not contain 'test automation'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.902213" elapsed="0.000276">'sales assistant
+<status status="FAIL" start="2026-05-28T21:37:50.050303" elapsed="0.000311">'sales assistant
 sales assistant
 zara
 helsinki
@@ -533,7 +613,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -543,42 +622,43 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'test automation'</status>
+tampere
+ole varhainen hakija' does not contain 'test automation'</status>
 </kw>
-<msg time="2026-05-27T23:54:21.902609" level="INFO">${found} = False</msg>
+<msg time="2026-05-28T21:37:50.050801" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.902106" elapsed="0.000536"/>
+<status status="PASS" start="2026-05-28T21:37:50.050185" elapsed="0.000645"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:21.902841" elapsed="0.000025"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.051051" elapsed="0.000030"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.902910" elapsed="0.000028"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.051136" elapsed="0.000027"/>
 </return>
-<status status="NOT RUN" start="2026-05-27T23:54:21.902735" elapsed="0.000244"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.050923" elapsed="0.000278"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:21.902716" elapsed="0.000307"/>
+<status status="PASS" start="2026-05-28T21:37:50.050904" elapsed="0.000339"/>
 </if>
 <var name="${substring}">test automation</var>
-<status status="PASS" start="2026-05-27T23:54:21.902024" elapsed="0.001025"/>
+<status status="PASS" start="2026-05-28T21:37:50.050106" elapsed="0.001166"/>
 </iter>
 <var>${substring}</var>
 <value>@{substrings}</value>
-<status status="PASS" start="2026-05-27T23:54:21.897420" elapsed="0.005678"/>
+<status status="PASS" start="2026-05-28T21:37:50.046235" elapsed="0.005088"/>
 </for>
 <kw name="Fail" owner="BuiltIn">
-<msg time="2026-05-27T23:54:21.903400" level="FAIL">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</msg>
+<msg time="2026-05-28T21:37:50.051679" level="FAIL">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</msg>
 <arg>None of the expected substrings were found in the text: ${substrings}</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.903218" elapsed="0.000241">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-28T21:37:50.051472" elapsed="0.000269">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </kw>
 <arg>${lower_text}</arg>
 <arg>test engineer</arg>
@@ -586,17 +666,17 @@ tampere' does not contain 'test automation'</status>
 <arg>quality engineer</arg>
 <arg>test automation</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="FAIL" start="2026-05-27T23:54:21.897105" elapsed="0.006470">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-28T21:37:50.045935" elapsed="0.005923">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </kw>
 <doc>Check that visible job offers are for Test Engineer or similar positions</doc>
 <tag>Jobs</tag>
 <tag>Linkedin</tag>
 <tag>Verification</tag>
-<status status="FAIL" start="2026-05-27T23:54:21.743579" elapsed="0.160266">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-28T21:37:49.832466" elapsed="0.219608">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </test>
 <test id="s1-t6" name="Job Listings Are Located In Finland" line="137">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-05-27T23:54:22.123342" level="INFO">${page_text} = Sales Assistant
+<msg time="2026-05-28T21:37:50.257634" level="INFO">${page_text} = Sales Assistant
 Sales Assistant
 ZARA
 Helsinki
@@ -607,10 +687,10 @@ Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-27T23:54:21.904726" elapsed="0.218668"/>
+<status status="PASS" start="2026-05-28T21:37:50.053001" elapsed="0.204679"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-27T23:54:22.124115" level="INFO">${lower_text} = sales assistant
+<msg time="2026-05-28T21:37:50.258283" level="INFO">${lower_text} = sales assistant
 sales assistant
 zara
 helsinki
@@ -621,14 +701,14 @@ helsinki cabin crew opportunities (dubai based, relocation provided)
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.123798" elapsed="0.000350"/>
+<status status="PASS" start="2026-05-28T21:37:50.257981" elapsed="0.000335"/>
 </kw>
 <kw name="Should Contain Any">
 <for flavor="IN">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-27T23:54:22.125287" level="FAIL">'sales assistant
+<msg time="2026-05-28T21:37:50.260572" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
@@ -647,7 +727,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -657,11 +736,12 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'finland'</msg>
+tampere
+ole varhainen hakija' does not contain 'finland'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-27T23:54:22.125124" elapsed="0.000232">'sales assistant
+<status status="FAIL" start="2026-05-28T21:37:50.259215" elapsed="0.001447">'sales assistant
 sales assistant
 zara
 helsinki
@@ -680,7 +760,6 @@ puutuotteiden pakkaaja
 puutuotteiden pakkaaja
 sol ☀
 riihimäki
-ole varhainen hakija
 1 viikko sitten
 studio creative director
 studio creative director
@@ -690,32 +769,33 @@ helsinki
 cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
-tampere' does not contain 'finland'</status>
+tampere
+ole varhainen hakija' does not contain 'finland'</status>
 </kw>
-<msg time="2026-05-27T23:54:22.125446" level="INFO">${found} = False</msg>
+<msg time="2026-05-28T21:37:50.260784" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.125016" elapsed="0.000449"/>
+<status status="PASS" start="2026-05-28T21:37:50.259110" elapsed="0.001704"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:22.125630" elapsed="0.000020"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.261038" elapsed="0.000021"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-27T23:54:22.125687" elapsed="0.000018"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.261100" elapsed="0.000018"/>
 </return>
-<status status="NOT RUN" start="2026-05-27T23:54:22.125533" elapsed="0.000198"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.260920" elapsed="0.000224"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:22.125517" elapsed="0.000240"/>
+<status status="PASS" start="2026-05-28T21:37:50.260889" elapsed="0.000281"/>
 </if>
 <var name="${substring}">finland</var>
-<status status="PASS" start="2026-05-27T23:54:22.124929" elapsed="0.000846"/>
+<status status="PASS" start="2026-05-28T21:37:50.259028" elapsed="0.002160"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
@@ -723,42 +803,42 @@ tampere' does not contain 'finland'</status>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.126030" elapsed="0.000113"/>
+<status status="PASS" start="2026-05-28T21:37:50.261436" elapsed="0.000106"/>
 </kw>
-<msg time="2026-05-27T23:54:22.126219" level="INFO">${found} = True</msg>
+<msg time="2026-05-28T21:37:50.261606" level="INFO">${found} = True</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.125933" elapsed="0.000305"/>
+<status status="PASS" start="2026-05-28T21:37:50.261348" elapsed="0.000276"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-05-27T23:54:22.126463" level="INFO">Found expected keyword: "helsinki"</msg>
+<msg time="2026-05-28T21:37:50.261841" level="INFO">Found expected keyword: "helsinki"</msg>
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.126378" elapsed="0.000116"/>
+<status status="PASS" start="2026-05-28T21:37:50.261759" elapsed="0.000111"/>
 </kw>
 <return>
-<status status="PASS" start="2026-05-27T23:54:22.126531" elapsed="0.000031"/>
+<status status="PASS" start="2026-05-28T21:37:50.261907" elapsed="0.000027"/>
 </return>
-<status status="PASS" start="2026-05-27T23:54:22.126295" elapsed="0.000294"/>
+<status status="PASS" start="2026-05-28T21:37:50.261679" elapsed="0.000284"/>
 </branch>
-<status status="PASS" start="2026-05-27T23:54:22.126282" elapsed="0.000335"/>
+<status status="PASS" start="2026-05-28T21:37:50.261667" elapsed="0.000322"/>
 </if>
 <var name="${substring}">helsinki</var>
-<status status="PASS" start="2026-05-27T23:54:22.125872" elapsed="0.000764"/>
+<status status="PASS" start="2026-05-28T21:37:50.261287" elapsed="0.000722"/>
 </iter>
 <var>${substring}</var>
 <value>@{substrings}</value>
-<status status="PASS" start="2026-05-27T23:54:22.124773" elapsed="0.001896"/>
+<status status="PASS" start="2026-05-28T21:37:50.258873" elapsed="0.003168"/>
 </for>
 <kw name="Fail" owner="BuiltIn">
 <arg>None of the expected substrings were found in the text: ${substrings}</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-05-27T23:54:22.126744" elapsed="0.000018"/>
+<status status="NOT RUN" start="2026-05-28T21:37:50.262114" elapsed="0.000109"/>
 </kw>
 <arg>${lower_text}</arg>
 <arg>finland</arg>
@@ -768,32 +848,32 @@ tampere' does not contain 'finland'</status>
 <arg>oulu</arg>
 <arg>turku</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="PASS" start="2026-05-27T23:54:22.124519" elapsed="0.002290"/>
+<status status="PASS" start="2026-05-28T21:37:50.258653" elapsed="0.003628"/>
 </kw>
 <doc>Verify that job offers are in proper location</doc>
 <tag>Dinland</tag>
 <tag>linkedin</tag>
 <tag>Verification</tag>
-<status status="PASS" start="2026-05-27T23:54:21.904349" elapsed="0.222671"/>
+<status status="PASS" start="2026-05-28T21:37:50.052607" elapsed="0.209918"/>
 </test>
 <doc>pip install robotframework robotframework-seleniumlibrary
 ChromeDriver (or GeckoDriver) matching browser version</doc>
-<status status="FAIL" start="2026-05-27T23:54:12.392034" elapsed="9.735505"/>
+<status status="FAIL" start="2026-05-28T21:37:38.090836" elapsed="12.172197"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="3" skip="0">All Tests</stat>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Dinland</stat>
 <stat pass="1" fail="0" skip="0">Easy</stat>
-<stat pass="1" fail="2" skip="0">Jobs</stat>
-<stat pass="2" fail="2" skip="0">LinkedIn</stat>
-<stat pass="2" fail="2" skip="0">Smoke</stat>
+<stat pass="2" fail="1" skip="0">Jobs</stat>
+<stat pass="3" fail="1" skip="0">LinkedIn</stat>
+<stat pass="3" fail="1" skip="0">Smoke</stat>
 <stat pass="1" fail="1" skip="0">Verification</stat>
 </tag>
 <suite>
-<stat name="Linkedin" id="s1" pass="3" fail="3" skip="0">Linkedin</stat>
+<stat name="Linkedin" id="s1" pass="4" fail="2" skip="0">Linkedin</stat>
 </suite>
 </statistics>
 <errors>

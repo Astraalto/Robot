@@ -40,21 +40,19 @@ Accept LinkedIn Cookies
 Fill In Job Title Search Field
     [Documentation]    Clears and fills the job title input field.
     ${title_field}=    Set Variable    css:#job-search-bar-keywords
-    Click Element                    ${CLOSE_SIGNIN} 
-    Wait Until Element Is Visible    ${title_field}
-    Clear Element Text               ${title_field}
-    Click Element                    ${title_field}
-    Input Text                       ${title_field}    ${JOB_TITLE}
+    Wait Until Element Is Visible      ${title_field}
+    Clear Element Text                 ${title_field}
+    Click Element                      ${title_field}
+    Input Text                         ${title_field}    ${JOB_TITLE}
     Log    Entered job title: ${JOB_TITLE}
 
 Fill In Location Search Field
     [Documentation]  Clears and fills location search field
     ${location_field}=    Set Variable   css:#job-search-bar-location
-    Click Element                      ${CLOSE_SIGNIN} 
     Wait Until Element Is Visible      ${location_field}
     Click Element Three Times          ${location_field}
     Input Text                         ${location_field}    ${JOB_LOCATION}
-    Log                                Enetered location:   ${JOB_LOCATION}
+    Log    Enetered location: ${JOB_LOCATION}
 
 Get Job Results Count
     [Documentation]     Return number of job listing cards from results
