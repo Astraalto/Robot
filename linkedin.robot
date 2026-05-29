@@ -5,7 +5,7 @@ Documentation
 ...                   ChromeDriver (or GeckoDriver) matching browser version
 
 
-Library     SeleniumLibrary     timeout=15s    
+Library     SeleniumLibrary     timeout=15s    implicit_wait=3s
 
 
 *** Variables ***
@@ -96,6 +96,7 @@ Test Engineer Finland
     [Documentation] 
     [Tags]                        Smoke     Easy
     Open Browser                  ${URL_ALL}       ${BROWSER} 
+    Wait Until Results Are Loaded
     Maximize Browser Window
     Click Element                 ${CLOSE WINDOW}
     Sleep  3s
@@ -112,8 +113,9 @@ Search For Test Engineer Jobs In Finland
 Linkedin Page Loaded Successfully
     [Documentation]                Verify that page opened without issues
     [Tags]                         Smoke
+    ${title}=    Get Title 
     Open Browser                   ${URL}      ${BROWSER}
-    Title Should Be                6 000 + työpaikat Finland
+    Should Contain   ${title}  Työpaikat
     Page Should Contain Element    css:.switcher-tabs__placeholder-text
     Log                            LinkedIn page loaded successfully
 

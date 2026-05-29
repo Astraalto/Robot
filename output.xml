@@ -1,300 +1,325 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-28T21:37:38.089853" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-05-29T21:28:20.110050" rpa="false" schemaversion="5">
 <suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
-<test id="s1-t1" name="Test Engineer Finland" line="97">
+<test id="s1-t1" name="Test Engineer Finland" line="95">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:38.235784" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
+<msg time="2026-05-29T21:28:20.249844" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
 <arg>${URL_ALL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-28T21:37:38.235577" elapsed="2.626843"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-05-28T21:37:40.862803" elapsed="0.061766"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:40.925303" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
-<arg>${CLOSE WINDOW}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:40.924879" elapsed="0.414774"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.340147" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-28T21:37:41.339911" elapsed="3.000334"/>
-</kw>
-<tag>Easy</tag>
-<tag>Smoke</tag>
-<status status="PASS" start="2026-05-28T21:37:38.234845" elapsed="6.105726"/>
-</test>
-<test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="105">
-<kw name="Fill In Job Title Search Field">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.342030" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
-<var>${title_field}</var>
-<arg>css:#job-search-bar-keywords</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.341856" elapsed="0.000198"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${title_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.342155" elapsed="0.016176"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>${title_field}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.358477" elapsed="0.023480"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.382301" level="INFO">Clicking element 'css:#job-search-bar-keywords'.</msg>
-<arg>${title_field}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.382114" elapsed="0.037812"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.420323" level="INFO">Typing text 'Test Engineer' into text field 'css:#job-search-bar-keywords'.</msg>
-<arg>${title_field}</arg>
-<arg>${JOB_TITLE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.420099" elapsed="0.037049"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.457462" level="INFO">Entered job title: Test Engineer</msg>
-<arg>Entered job title: ${JOB_TITLE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.457303" elapsed="0.000201"/>
-</kw>
-<doc>Clears and fills the job title input field.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.341616" elapsed="0.115957"/>
-</kw>
-<kw name="Fill In Location Search Field">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.458117" level="INFO">${location_field} = css:#job-search-bar-location</msg>
-<var>${location_field}</var>
-<arg>css:#job-search-bar-location</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.458019" elapsed="0.000119"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${location_field}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.458210" elapsed="0.010197"/>
-</kw>
-<kw name="Click Element Three Times">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.469025" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.468871" elapsed="0.049328"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.518570" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.518348" elapsed="0.033953"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.552603" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
-<arg>${locator}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.552433" elapsed="0.030863"/>
-</kw>
-<arg>${location_field}</arg>
-<doc>Clciks the element three times to select all text</doc>
-<status status="PASS" start="2026-05-28T21:37:44.468611" elapsed="0.114765"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.583654" level="INFO">Typing text 'Finland' into text field 'css:#job-search-bar-location'.</msg>
-<arg>${location_field}</arg>
-<arg>${JOB_LOCATION}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.583473" elapsed="0.041652"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.625393" level="INFO">Enetered location: Finland</msg>
-<arg>Enetered location: ${JOB_LOCATION}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.625258" elapsed="0.000172"/>
-</kw>
-<doc>Clears and fills location search field</doc>
-<status status="PASS" start="2026-05-28T21:37:44.457827" elapsed="0.167658"/>
-</kw>
-<kw name="Submit Job Search">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-05-28T21:37:44.625954" level="INFO">${location_field} = css:#job-search-bar-location</msg>
-<var>${location_field}</var>
-<arg>css:#job-search-bar-location</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.625857" elapsed="0.000117"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:44.626334" level="INFO">Sending key(s) ('RETURN',) to css:#job-search-bar-location element.</msg>
-<msg time="2026-05-28T21:37:44.896653" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2026-05-28T21:37:44.896720" level="INFO">Releasing special key RETURN.</msg>
-<arg>${location_field}</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2026-05-28T21:37:44.626049" elapsed="1.333185"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:45.959588" level="INFO">Search form submitted</msg>
-<arg>Search form submitted</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:45.959437" elapsed="0.000218"/>
-</kw>
-<doc>Execute searching by clicking Search button</doc>
-<status status="PASS" start="2026-05-28T21:37:44.625685" elapsed="1.334062"/>
+<status status="PASS" start="2026-05-29T21:28:20.249654" elapsed="2.661676"/>
 </kw>
 <kw name="Wait Until Results Are Loaded">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${RESULTS_CONTAINER}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-28T21:37:45.960429" elapsed="0.054549"/>
+<status status="PASS" start="2026-05-29T21:28:22.912137" elapsed="0.413247"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-05-28T21:37:47.015674" level="INFO">Slept 1 second.</msg>
-<msg time="2026-05-28T21:37:47.015753" level="INFO">Allow dynamic content to fully render</msg>
+<msg time="2026-05-29T21:28:24.326075" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-29T21:28:24.326151" level="INFO">Allow dynamic content to fully render</msg>
 <arg>1s</arg>
 <arg>reason=Allow dynamic content to fully render</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-05-28T21:37:46.015292" elapsed="1.000519"/>
+<status status="PASS" start="2026-05-29T21:28:23.325611" elapsed="1.000599"/>
 </kw>
 <doc>Waits for the job results appear on the page</doc>
-<status status="PASS" start="2026-05-28T21:37:45.960129" elapsed="1.055782"/>
+<status status="PASS" start="2026-05-29T21:28:22.911839" elapsed="1.414469"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-29T21:28:24.326612" elapsed="0.034047"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:24.361211" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
+<arg>${CLOSE WINDOW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:24.360966" elapsed="0.048293"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-29T21:28:27.410075" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-29T21:28:24.409608" elapsed="3.000572"/>
+</kw>
+<tag>Easy</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-05-29T21:28:20.248986" elapsed="7.161505"/>
+</test>
+<test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="104">
+<kw name="Fill In Job Title Search Field">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-29T21:28:27.412797" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
+<var>${title_field}</var>
+<arg>css:#job-search-bar-keywords</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.412685" elapsed="0.000136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${title_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.412893" elapsed="0.011971"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${title_field}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.425011" elapsed="0.024843"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.450135" level="INFO">Clicking element 'css:#job-search-bar-keywords'.</msg>
+<arg>${title_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.449974" elapsed="0.041390"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.491835" level="INFO">Typing text 'Test Engineer' into text field 'css:#job-search-bar-keywords'.</msg>
+<arg>${title_field}</arg>
+<arg>${JOB_TITLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.491553" elapsed="0.055352"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:47.016273" level="INFO">Search submitted and results loaded</msg>
+<msg time="2026-05-29T21:28:27.547190" level="INFO">Entered job title: Test Engineer</msg>
+<arg>Entered job title: ${JOB_TITLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.547049" elapsed="0.000178"/>
+</kw>
+<doc>Clears and fills the job title input field.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.412478" elapsed="0.134810"/>
+</kw>
+<kw name="Fill In Location Search Field">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-29T21:28:27.548150" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<var>${location_field}</var>
+<arg>css:#job-search-bar-location</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.547959" elapsed="0.000221"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${location_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.548275" elapsed="0.010553"/>
+</kw>
+<kw name="Click Element Three Times">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.559399" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.559243" elapsed="0.039925"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.599484" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.599305" elapsed="0.034303"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.634006" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.633746" elapsed="0.036901"/>
+</kw>
+<arg>${location_field}</arg>
+<doc>Clciks the element three times to select all text</doc>
+<status status="PASS" start="2026-05-29T21:28:27.559003" elapsed="0.111750"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.671080" level="INFO">Typing text 'Finland' into text field 'css:#job-search-bar-location'.</msg>
+<arg>${location_field}</arg>
+<arg>${JOB_LOCATION}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.670868" elapsed="0.046922"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-29T21:28:27.718151" level="INFO">Enetered location: Finland</msg>
+<arg>Enetered location: ${JOB_LOCATION}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.717964" elapsed="0.000236"/>
+</kw>
+<doc>Clears and fills location search field</doc>
+<status status="PASS" start="2026-05-29T21:28:27.547626" elapsed="0.170657"/>
+</kw>
+<kw name="Submit Job Search">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-29T21:28:27.719026" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<var>${location_field}</var>
+<arg>css:#job-search-bar-location</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.718892" elapsed="0.000161"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:27.719499" level="INFO">Sending key(s) ('RETURN',) to css:#job-search-bar-location element.</msg>
+<msg time="2026-05-29T21:28:27.986033" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-05-29T21:28:27.986123" level="INFO">Releasing special key RETURN.</msg>
+<arg>${location_field}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-05-29T21:28:27.719168" elapsed="1.235961"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-29T21:28:28.955477" level="INFO">Search form submitted</msg>
+<arg>Search form submitted</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-29T21:28:28.955329" elapsed="0.000205"/>
+</kw>
+<doc>Execute searching by clicking Search button</doc>
+<status status="PASS" start="2026-05-29T21:28:27.718633" elapsed="1.236988"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${RESULTS_CONTAINER}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-29T21:28:28.956243" elapsed="0.095314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-29T21:28:30.052023" level="INFO">Slept 1 second.</msg>
+<msg time="2026-05-29T21:28:30.052098" level="INFO">Allow dynamic content to fully render</msg>
+<arg>1s</arg>
+<arg>reason=Allow dynamic content to fully render</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-29T21:28:29.051750" elapsed="1.000408"/>
+</kw>
+<doc>Waits for the job results appear on the page</doc>
+<status status="PASS" start="2026-05-29T21:28:28.955970" elapsed="1.096285"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-29T21:28:30.052726" level="INFO">Search submitted and results loaded</msg>
 <arg>Search submitted and results loaded</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:47.016132" elapsed="0.000188"/>
+<status status="PASS" start="2026-05-29T21:28:30.052559" elapsed="0.000227"/>
 </kw>
 <doc>Enter the search criteria for Test Engineer positions</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-05-28T21:37:44.341113" elapsed="2.675383"/>
+<status status="PASS" start="2026-05-29T21:28:27.410944" elapsed="2.642095"/>
 </test>
-<test id="s1-t3" name="Linkedin Page Loaded Successfully" line="114">
+<test id="s1-t3" name="Linkedin Page Loaded Successfully" line="113">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:30.062282" level="INFO">${title} = 283 Test Engineer Työpaikat Finland</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-05-29T21:28:30.053895" elapsed="0.008418"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:47.017345" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
+<msg time="2026-05-29T21:28:30.062811" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-28T21:37:47.017188" elapsed="2.373530"/>
+<status status="PASS" start="2026-05-29T21:28:30.062542" elapsed="2.600579"/>
 </kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:49.819007" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-05-28T21:37:49.819148" level="FAIL">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</msg>
-<arg>6 000 + työpaikat Finland</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="FAIL" start="2026-05-28T21:37:49.391005" elapsed="0.429358">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Työpaikat</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-05-29T21:28:32.663398" elapsed="0.000192"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-05-29T21:28:33.169118" level="INFO">Current page contains element 'css:.switcher-tabs__placeholder-text'.</msg>
 <arg>css:.switcher-tabs__placeholder-text</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:49.820665" elapsed="0.000037"/>
+<status status="PASS" start="2026-05-29T21:28:32.663796" elapsed="0.505401"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
+<msg time="2026-05-29T21:28:33.169568" level="INFO">LinkedIn page loaded successfully</msg>
 <arg>LinkedIn page loaded successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:49.820885" elapsed="0.000032"/>
+<status status="PASS" start="2026-05-29T21:28:33.169443" elapsed="0.000177"/>
 </kw>
 <doc>Verify that page opened without issues</doc>
 <tag>Smoke</tag>
-<status status="FAIL" start="2026-05-28T21:37:47.016833" elapsed="2.804331">Title should have been '6 000 + työpaikat Finland' but was '6 000 + työpaikat Finland'.</status>
+<status status="PASS" start="2026-05-29T21:28:30.053526" elapsed="3.116368"/>
 </test>
 <test id="s1-t4" name="Job Search Returns Results" line="122">
 <kw name="Get Job Results Count">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:49.830113" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="10df4f6a9d84fee3635f4585fb0006de", element="f.C0C9D3ADB12D6A4FE92EDB5D5B4FB2DC.d.98F9E566D8E913244CA93AB62320428C.e.152")&gt;, &lt;selenium.webdri...</msg>
+<msg time="2026-05-29T21:28:33.187655" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a0aa099565916025722a58d6bdca8e1b", element="f.8A82DF0F800785262CDCA99BD71CF333.d.BC0373218AADF4EFFEAFEFA8E019B812.e.65")&gt;, &lt;selenium.webdriv...</msg>
 <var>${elements}</var>
 <arg>${JOB_CARD_SELECTOR}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:49.822309" elapsed="0.007839"/>
+<status status="PASS" start="2026-05-29T21:28:33.171006" elapsed="0.016710"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-05-28T21:37:49.830356" level="INFO">Length is 60.</msg>
-<msg time="2026-05-28T21:37:49.830418" level="INFO">${count} = 60</msg>
+<msg time="2026-05-29T21:28:33.188038" level="INFO">Length is 60.</msg>
+<msg time="2026-05-29T21:28:33.188107" level="INFO">${count} = 60</msg>
 <var>${count}</var>
 <arg>${elements}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-05-28T21:37:49.830247" elapsed="0.000193"/>
+<status status="PASS" start="2026-05-29T21:28:33.187886" elapsed="0.000249"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2026-05-28T21:37:49.830492" elapsed="0.000048"/>
+<status status="PASS" start="2026-05-29T21:28:33.188200" elapsed="0.000068"/>
 </return>
-<msg time="2026-05-28T21:37:49.830657" level="INFO">${count} = 60</msg>
+<msg time="2026-05-29T21:28:33.188416" level="INFO">${count} = 60</msg>
 <var>${count}</var>
 <doc>Return number of job listing cards from results</doc>
-<status status="PASS" start="2026-05-28T21:37:49.822130" elapsed="0.008549"/>
+<status status="PASS" start="2026-05-29T21:28:33.170797" elapsed="0.017648"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:49.831155" level="INFO">Found 60 job listing(s) for "Test Engineer" in "Finland"</msg>
+<msg time="2026-05-29T21:28:33.188955" level="INFO">Found 60 job listing(s) for "Test Engineer" in "Finland"</msg>
 <arg>Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:49.830922" elapsed="0.000293"/>
+<status status="PASS" start="2026-05-29T21:28:33.188747" elapsed="0.000250"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${count} &gt;= ${MIN_RESULTS}</arg>
 <arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-05-28T21:37:49.831459" elapsed="0.000381"/>
+<status status="PASS" start="2026-05-29T21:28:33.189181" elapsed="0.000354"/>
 </kw>
 <doc>Verify that at least one result returns from job search</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-05-28T21:37:49.821672" elapsed="0.010372"/>
+<status status="PASS" start="2026-05-29T21:28:33.170326" elapsed="0.019410"/>
 </test>
 <test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="130">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:50.044721" level="INFO">${page_text} = Sales Assistant
+<msg time="2026-05-29T21:28:33.388688" level="INFO">${page_text} = Sales Assistant
 Sales Assistant
 ZARA
 Helsinki
-5 päivää sitten
+6 päivää sitten
 Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 ...</msg>
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:49.832848" elapsed="0.211940"/>
+<status status="PASS" start="2026-05-29T21:28:33.190478" elapsed="0.198257"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.045488" level="INFO">${lower_text} = sales assistant
+<msg time="2026-05-29T21:28:33.389416" level="INFO">${lower_text} = sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 ...</msg>
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.045175" elapsed="0.000342"/>
+<status status="PASS" start="2026-05-29T21:28:33.389041" elapsed="0.000406"/>
 </kw>
 <kw name="Should Contain Any">
 <for flavor="IN">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.046946" level="FAIL">'sales assistant
+<msg time="2026-05-29T21:28:33.390745" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -314,20 +339,320 @@ cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
 tampere
-ole varhainen hakija' does not contain 'test engineer'</msg>
+ole varhainen hakija
+1 viikko sitten
+freelance graphic designer
+freelance graphic designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+freelance brand designer
+freelance brand designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+consultant
+consultant
+mckinsey &amp; company
+helsinki
+2 viikkoa sitten
+construction project director - uk, ireland &amp; europe
+construction project director - uk, ireland &amp; europe
+crown
+finland
+ole varhainen hakija
+2 kuukautta sitten
+freelance english writer - ai trainer
+freelance english writer - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+creative designer
+creative designer
+air apps
+helsinki
+ole varhainen hakija
+22 tuntia sitten
+voice actor - remote
+voice actor - remote
+yo it consulting
+finland
+3 viikkoa sitten
+paralegal
+paralegal
+wolt
+helsinki
+ole varhainen hakija
+2 päivää sitten
+real estate agent (based in dubai)
+real estate agent (based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+oulu
+ole varhainen hakija
+3 kuukautta sitten
+warehouse operator / varastotyöntekijä (m/f/x)
+warehouse operator / varastotyöntekijä (m/f/x)
+skeleton technologies
+varkaus
+ole varhainen hakija
+4 päivää sitten
+quality manager
+quality manager
+crown
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+interior architect
+interior architect
+vertti &amp; co
+helsinki
+4 päivää sitten
+front desk receptionist
+front desk receptionist
+apukka resort
+rovaniemi
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+tampere
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+turku
+ole varhainen hakija
+3 kuukautta sitten
+freelance presentation designer
+freelance presentation designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+graphics designer - remote
+graphics designer - remote
+yo it consulting
+finland
+2 viikkoa sitten
+healthcare professional - remote
+healthcare professional - remote
+yo it consulting
+finland
+3 viikkoa sitten
+prompt writer - remote
+prompt writer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+guest service officer
+guest service officer
+royal caribbean group
+helsinki
+1 päivä sitten
+helsinki cabin crew opportunities (dubai based, relocation provided)
+helsinki cabin crew opportunities (dubai based, relocation provided)
+emirates
+helsinki metropolitan area
+1 viikko sitten
+international student ambassador - study in finland
+international student ambassador - study in finland
+nbyula - skillizens without borders
+finland
+11 kuukautta sitten
+professional content creator
+professional content creator
+multiplechat
+finland
+2 kuukautta sitten
+lead artist
+lead artist
+netflix
+helsinki
+2 viikkoa sitten
+ui/ux designer - remote
+ui/ux designer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+instru optiikka oy
+saarijärvi
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (t1 certified)
+autonomous vehicle driver (t1 certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+freelance junior journalist - ai trainer
+freelance junior journalist - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+avoin hakemus nrc groupille
+avoin hakemus nrc groupille
+nrc group finland
+finland
+ole varhainen hakija
+1 kuukausi sitten
+site manager
+site manager
+crown
+helsinki
+ole varhainen hakija
+2 viikkoa sitten
+freelance web designer
+freelance web designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk receptionist
+front desk receptionist
+halo igloos
+rovaniemi
+1 kuukausi sitten
+canva user/specialist - remote
+canva user/specialist - remote
+yo it consulting
+finland
+3 viikkoa sitten
+copywriter - remote
+copywriter - remote
+yo it consulting
+finland
+ole varhainen hakija
+4 tuntia sitten
+content creator &amp; graphic designer
+content creator &amp; graphic designer
+rebl eats
+helsinki
+1 kuukausi sitten
+vp of investor relations (m/f/x)
+vp of investor relations (m/f/x)
+skeleton technologies
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+content marketing lead
+content marketing lead
+sandberg translation partners ltd
+finland
+ole varhainen hakija
+2 päivää sitten
+senior electrical engineer (m/f/x)
+senior electrical engineer (m/f/x)
+skeleton technologies
+lappeenranta
+ole varhainen hakija
+1 kuukausi sitten
+3d artist
+3d artist
+paradox interactive
+tampere
+1 kuukausi sitten
+restaurant server
+restaurant server
+halo igloos
+rovaniemi
+1 kuukausi sitten
+research physicist - freelance ai trainer
+research physicist - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+district sales executive
+district sales executive
+expeditors
+vantaa
+ole varhainen hakija
+1 kuukausi sitten
+data scientist (python &amp; sql) - freelance ai trainer
+data scientist (python &amp; sql) - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (bertha certified)
+autonomous vehicle driver (bertha certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+machine learning developer (freelance)
+machine learning developer (freelance)
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk representatives (rovaniemi)
+front desk representatives (rovaniemi)
+arctic gm &amp; sonka resort | the original aurora hunters®
+rovaniemi
+ole varhainen hakija
+1 päivä sitten
+senior global supply and demand planning manager
+senior global supply and demand planning manager
+dsj global
+helsinki
+1 kuukausi sitten
+work &amp; travel in greece (relocation support available)!
+work &amp; travel in greece (relocation support available)!
+fh collective - academy
+lahti
+ole varhainen hakija
+1 kuukausi sitten
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
+helsinki
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'test engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.046715" elapsed="0.000333">'sales assistant
+<status status="FAIL" start="2026-05-29T21:28:33.390398" elapsed="0.000657">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -338,55 +663,66 @@ puutuotteiden pakkaaja
 sol ☀
 riihimäki
 1 viikko sitten
-studio creative director
-studio creative director
-netflix
+    [ Message content over the limit has been removed. ]
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
 helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'test engineer'</status>
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'test engineer'</status>
 </kw>
-<msg time="2026-05-28T21:37:50.047270" level="INFO">${found} = False</msg>
+<msg time="2026-05-29T21:28:33.391167" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.046573" elapsed="0.000725"/>
+<status status="PASS" start="2026-05-29T21:28:33.390287" elapsed="0.000901"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.047545" elapsed="0.000025"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.391375" elapsed="0.000020"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.047618" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.391434" elapsed="0.000019"/>
 </return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.047416" elapsed="0.000269"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.391265" elapsed="0.000215"/>
 </branch>
-<status status="PASS" start="2026-05-28T21:37:50.047389" elapsed="0.000334"/>
+<status status="PASS" start="2026-05-29T21:28:33.391245" elapsed="0.000262"/>
 </if>
 <var name="${substring}">test engineer</var>
-<status status="PASS" start="2026-05-28T21:37:50.046449" elapsed="0.001300"/>
+<status status="PASS" start="2026-05-29T21:28:33.390195" elapsed="0.001331"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.048279" level="FAIL">'sales assistant
+<msg time="2026-05-29T21:28:33.392139" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -406,20 +742,320 @@ cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
 tampere
-ole varhainen hakija' does not contain 'qa engineer'</msg>
+ole varhainen hakija
+1 viikko sitten
+freelance graphic designer
+freelance graphic designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+freelance brand designer
+freelance brand designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+consultant
+consultant
+mckinsey &amp; company
+helsinki
+2 viikkoa sitten
+construction project director - uk, ireland &amp; europe
+construction project director - uk, ireland &amp; europe
+crown
+finland
+ole varhainen hakija
+2 kuukautta sitten
+freelance english writer - ai trainer
+freelance english writer - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+creative designer
+creative designer
+air apps
+helsinki
+ole varhainen hakija
+22 tuntia sitten
+voice actor - remote
+voice actor - remote
+yo it consulting
+finland
+3 viikkoa sitten
+paralegal
+paralegal
+wolt
+helsinki
+ole varhainen hakija
+2 päivää sitten
+real estate agent (based in dubai)
+real estate agent (based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+oulu
+ole varhainen hakija
+3 kuukautta sitten
+warehouse operator / varastotyöntekijä (m/f/x)
+warehouse operator / varastotyöntekijä (m/f/x)
+skeleton technologies
+varkaus
+ole varhainen hakija
+4 päivää sitten
+quality manager
+quality manager
+crown
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+interior architect
+interior architect
+vertti &amp; co
+helsinki
+4 päivää sitten
+front desk receptionist
+front desk receptionist
+apukka resort
+rovaniemi
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+tampere
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+turku
+ole varhainen hakija
+3 kuukautta sitten
+freelance presentation designer
+freelance presentation designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+graphics designer - remote
+graphics designer - remote
+yo it consulting
+finland
+2 viikkoa sitten
+healthcare professional - remote
+healthcare professional - remote
+yo it consulting
+finland
+3 viikkoa sitten
+prompt writer - remote
+prompt writer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+guest service officer
+guest service officer
+royal caribbean group
+helsinki
+1 päivä sitten
+helsinki cabin crew opportunities (dubai based, relocation provided)
+helsinki cabin crew opportunities (dubai based, relocation provided)
+emirates
+helsinki metropolitan area
+1 viikko sitten
+international student ambassador - study in finland
+international student ambassador - study in finland
+nbyula - skillizens without borders
+finland
+11 kuukautta sitten
+professional content creator
+professional content creator
+multiplechat
+finland
+2 kuukautta sitten
+lead artist
+lead artist
+netflix
+helsinki
+2 viikkoa sitten
+ui/ux designer - remote
+ui/ux designer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+instru optiikka oy
+saarijärvi
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (t1 certified)
+autonomous vehicle driver (t1 certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+freelance junior journalist - ai trainer
+freelance junior journalist - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+avoin hakemus nrc groupille
+avoin hakemus nrc groupille
+nrc group finland
+finland
+ole varhainen hakija
+1 kuukausi sitten
+site manager
+site manager
+crown
+helsinki
+ole varhainen hakija
+2 viikkoa sitten
+freelance web designer
+freelance web designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk receptionist
+front desk receptionist
+halo igloos
+rovaniemi
+1 kuukausi sitten
+canva user/specialist - remote
+canva user/specialist - remote
+yo it consulting
+finland
+3 viikkoa sitten
+copywriter - remote
+copywriter - remote
+yo it consulting
+finland
+ole varhainen hakija
+4 tuntia sitten
+content creator &amp; graphic designer
+content creator &amp; graphic designer
+rebl eats
+helsinki
+1 kuukausi sitten
+vp of investor relations (m/f/x)
+vp of investor relations (m/f/x)
+skeleton technologies
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+content marketing lead
+content marketing lead
+sandberg translation partners ltd
+finland
+ole varhainen hakija
+2 päivää sitten
+senior electrical engineer (m/f/x)
+senior electrical engineer (m/f/x)
+skeleton technologies
+lappeenranta
+ole varhainen hakija
+1 kuukausi sitten
+3d artist
+3d artist
+paradox interactive
+tampere
+1 kuukausi sitten
+restaurant server
+restaurant server
+halo igloos
+rovaniemi
+1 kuukausi sitten
+research physicist - freelance ai trainer
+research physicist - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+district sales executive
+district sales executive
+expeditors
+vantaa
+ole varhainen hakija
+1 kuukausi sitten
+data scientist (python &amp; sql) - freelance ai trainer
+data scientist (python &amp; sql) - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (bertha certified)
+autonomous vehicle driver (bertha certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+machine learning developer (freelance)
+machine learning developer (freelance)
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk representatives (rovaniemi)
+front desk representatives (rovaniemi)
+arctic gm &amp; sonka resort | the original aurora hunters®
+rovaniemi
+ole varhainen hakija
+1 päivä sitten
+senior global supply and demand planning manager
+senior global supply and demand planning manager
+dsj global
+helsinki
+1 kuukausi sitten
+work &amp; travel in greece (relocation support available)!
+work &amp; travel in greece (relocation support available)!
+fh collective - academy
+lahti
+ole varhainen hakija
+1 kuukausi sitten
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
+helsinki
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'qa engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.048082" elapsed="0.000275">'sales assistant
+<status status="FAIL" start="2026-05-29T21:28:33.391812" elapsed="0.000479">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -430,55 +1066,66 @@ puutuotteiden pakkaaja
 sol ☀
 riihimäki
 1 viikko sitten
-studio creative director
-studio creative director
-netflix
+    [ Message content over the limit has been removed. ]
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
 helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'qa engineer'</status>
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'qa engineer'</status>
 </kw>
-<msg time="2026-05-28T21:37:50.048461" level="INFO">${found} = False</msg>
+<msg time="2026-05-29T21:28:33.392386" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.047965" elapsed="0.000519"/>
+<status status="PASS" start="2026-05-29T21:28:33.391699" elapsed="0.000706"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.048676" elapsed="0.000023"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.392559" elapsed="0.000019"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.048745" elapsed="0.000022"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.392613" elapsed="0.000016"/>
 </return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.048566" elapsed="0.000235"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.392469" elapsed="0.000184"/>
 </branch>
-<status status="PASS" start="2026-05-28T21:37:50.048546" elapsed="0.000290"/>
+<status status="PASS" start="2026-05-29T21:28:33.392454" elapsed="0.000224"/>
 </if>
 <var name="${substring}">qa engineer</var>
-<status status="PASS" start="2026-05-28T21:37:50.047882" elapsed="0.000978"/>
+<status status="PASS" start="2026-05-29T21:28:33.391633" elapsed="0.001062"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.049373" level="FAIL">'sales assistant
+<msg time="2026-05-29T21:28:33.393234" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -498,20 +1145,320 @@ cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
 tampere
-ole varhainen hakija' does not contain 'quality engineer'</msg>
+ole varhainen hakija
+1 viikko sitten
+freelance graphic designer
+freelance graphic designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+freelance brand designer
+freelance brand designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+consultant
+consultant
+mckinsey &amp; company
+helsinki
+2 viikkoa sitten
+construction project director - uk, ireland &amp; europe
+construction project director - uk, ireland &amp; europe
+crown
+finland
+ole varhainen hakija
+2 kuukautta sitten
+freelance english writer - ai trainer
+freelance english writer - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+creative designer
+creative designer
+air apps
+helsinki
+ole varhainen hakija
+22 tuntia sitten
+voice actor - remote
+voice actor - remote
+yo it consulting
+finland
+3 viikkoa sitten
+paralegal
+paralegal
+wolt
+helsinki
+ole varhainen hakija
+2 päivää sitten
+real estate agent (based in dubai)
+real estate agent (based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+oulu
+ole varhainen hakija
+3 kuukautta sitten
+warehouse operator / varastotyöntekijä (m/f/x)
+warehouse operator / varastotyöntekijä (m/f/x)
+skeleton technologies
+varkaus
+ole varhainen hakija
+4 päivää sitten
+quality manager
+quality manager
+crown
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+interior architect
+interior architect
+vertti &amp; co
+helsinki
+4 päivää sitten
+front desk receptionist
+front desk receptionist
+apukka resort
+rovaniemi
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+tampere
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+turku
+ole varhainen hakija
+3 kuukautta sitten
+freelance presentation designer
+freelance presentation designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+graphics designer - remote
+graphics designer - remote
+yo it consulting
+finland
+2 viikkoa sitten
+healthcare professional - remote
+healthcare professional - remote
+yo it consulting
+finland
+3 viikkoa sitten
+prompt writer - remote
+prompt writer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+guest service officer
+guest service officer
+royal caribbean group
+helsinki
+1 päivä sitten
+helsinki cabin crew opportunities (dubai based, relocation provided)
+helsinki cabin crew opportunities (dubai based, relocation provided)
+emirates
+helsinki metropolitan area
+1 viikko sitten
+international student ambassador - study in finland
+international student ambassador - study in finland
+nbyula - skillizens without borders
+finland
+11 kuukautta sitten
+professional content creator
+professional content creator
+multiplechat
+finland
+2 kuukautta sitten
+lead artist
+lead artist
+netflix
+helsinki
+2 viikkoa sitten
+ui/ux designer - remote
+ui/ux designer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+instru optiikka oy
+saarijärvi
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (t1 certified)
+autonomous vehicle driver (t1 certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+freelance junior journalist - ai trainer
+freelance junior journalist - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+avoin hakemus nrc groupille
+avoin hakemus nrc groupille
+nrc group finland
+finland
+ole varhainen hakija
+1 kuukausi sitten
+site manager
+site manager
+crown
+helsinki
+ole varhainen hakija
+2 viikkoa sitten
+freelance web designer
+freelance web designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk receptionist
+front desk receptionist
+halo igloos
+rovaniemi
+1 kuukausi sitten
+canva user/specialist - remote
+canva user/specialist - remote
+yo it consulting
+finland
+3 viikkoa sitten
+copywriter - remote
+copywriter - remote
+yo it consulting
+finland
+ole varhainen hakija
+4 tuntia sitten
+content creator &amp; graphic designer
+content creator &amp; graphic designer
+rebl eats
+helsinki
+1 kuukausi sitten
+vp of investor relations (m/f/x)
+vp of investor relations (m/f/x)
+skeleton technologies
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+content marketing lead
+content marketing lead
+sandberg translation partners ltd
+finland
+ole varhainen hakija
+2 päivää sitten
+senior electrical engineer (m/f/x)
+senior electrical engineer (m/f/x)
+skeleton technologies
+lappeenranta
+ole varhainen hakija
+1 kuukausi sitten
+3d artist
+3d artist
+paradox interactive
+tampere
+1 kuukausi sitten
+restaurant server
+restaurant server
+halo igloos
+rovaniemi
+1 kuukausi sitten
+research physicist - freelance ai trainer
+research physicist - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+district sales executive
+district sales executive
+expeditors
+vantaa
+ole varhainen hakija
+1 kuukausi sitten
+data scientist (python &amp; sql) - freelance ai trainer
+data scientist (python &amp; sql) - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (bertha certified)
+autonomous vehicle driver (bertha certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+machine learning developer (freelance)
+machine learning developer (freelance)
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk representatives (rovaniemi)
+front desk representatives (rovaniemi)
+arctic gm &amp; sonka resort | the original aurora hunters®
+rovaniemi
+ole varhainen hakija
+1 päivä sitten
+senior global supply and demand planning manager
+senior global supply and demand planning manager
+dsj global
+helsinki
+1 kuukausi sitten
+work &amp; travel in greece (relocation support available)!
+work &amp; travel in greece (relocation support available)!
+fh collective - academy
+lahti
+ole varhainen hakija
+1 kuukausi sitten
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
+helsinki
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'quality engineer'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.049182" elapsed="0.000268">'sales assistant
+<status status="FAIL" start="2026-05-29T21:28:33.392954" elapsed="0.000438">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -522,55 +1469,66 @@ puutuotteiden pakkaaja
 sol ☀
 riihimäki
 1 viikko sitten
-studio creative director
-studio creative director
-netflix
+    [ Message content over the limit has been removed. ]
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
 helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'quality engineer'</status>
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'quality engineer'</status>
 </kw>
-<msg time="2026-05-28T21:37:50.049557" level="INFO">${found} = False</msg>
+<msg time="2026-05-29T21:28:33.393488" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.049065" elapsed="0.000518"/>
+<status status="PASS" start="2026-05-29T21:28:33.392868" elapsed="0.000640"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.049780" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.393652" elapsed="0.000019"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.049857" elapsed="0.000024"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.393705" elapsed="0.000015"/>
 </return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.049665" elapsed="0.000247"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.393568" elapsed="0.000175"/>
 </branch>
-<status status="PASS" start="2026-05-28T21:37:50.049648" elapsed="0.000299"/>
+<status status="PASS" start="2026-05-29T21:28:33.393555" elapsed="0.000211"/>
 </if>
 <var name="${substring}">quality engineer</var>
-<status status="PASS" start="2026-05-28T21:37:50.048989" elapsed="0.000983"/>
+<status status="PASS" start="2026-05-29T21:28:33.392794" elapsed="0.000988"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.050525" level="FAIL">'sales assistant
+<msg time="2026-05-29T21:28:33.394289" level="FAIL">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -590,20 +1548,320 @@ cnc-koneistaja tampereelle
 cnc-koneistaja tampereelle
 sol ☀
 tampere
-ole varhainen hakija' does not contain 'test automation'</msg>
+ole varhainen hakija
+1 viikko sitten
+freelance graphic designer
+freelance graphic designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+freelance brand designer
+freelance brand designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+consultant
+consultant
+mckinsey &amp; company
+helsinki
+2 viikkoa sitten
+construction project director - uk, ireland &amp; europe
+construction project director - uk, ireland &amp; europe
+crown
+finland
+ole varhainen hakija
+2 kuukautta sitten
+freelance english writer - ai trainer
+freelance english writer - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+creative designer
+creative designer
+air apps
+helsinki
+ole varhainen hakija
+22 tuntia sitten
+voice actor - remote
+voice actor - remote
+yo it consulting
+finland
+3 viikkoa sitten
+paralegal
+paralegal
+wolt
+helsinki
+ole varhainen hakija
+2 päivää sitten
+real estate agent (based in dubai)
+real estate agent (based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+oulu
+ole varhainen hakija
+3 kuukautta sitten
+warehouse operator / varastotyöntekijä (m/f/x)
+warehouse operator / varastotyöntekijä (m/f/x)
+skeleton technologies
+varkaus
+ole varhainen hakija
+4 päivää sitten
+quality manager
+quality manager
+crown
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+helsinki
+ole varhainen hakija
+3 kuukautta sitten
+interior architect
+interior architect
+vertti &amp; co
+helsinki
+4 päivää sitten
+front desk receptionist
+front desk receptionist
+apukka resort
+rovaniemi
+1 kuukausi sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+tampere
+ole varhainen hakija
+3 kuukautta sitten
+real estate agent ( based in dubai)
+real estate agent ( based in dubai)
+betterhomes
+turku
+ole varhainen hakija
+3 kuukautta sitten
+freelance presentation designer
+freelance presentation designer
+mindrift
+finland
+ole varhainen hakija
+4 päivää sitten
+graphics designer - remote
+graphics designer - remote
+yo it consulting
+finland
+2 viikkoa sitten
+healthcare professional - remote
+healthcare professional - remote
+yo it consulting
+finland
+3 viikkoa sitten
+prompt writer - remote
+prompt writer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+guest service officer
+guest service officer
+royal caribbean group
+helsinki
+1 päivä sitten
+helsinki cabin crew opportunities (dubai based, relocation provided)
+helsinki cabin crew opportunities (dubai based, relocation provided)
+emirates
+helsinki metropolitan area
+1 viikko sitten
+international student ambassador - study in finland
+international student ambassador - study in finland
+nbyula - skillizens without borders
+finland
+11 kuukautta sitten
+professional content creator
+professional content creator
+multiplechat
+finland
+2 kuukautta sitten
+lead artist
+lead artist
+netflix
+helsinki
+2 viikkoa sitten
+ui/ux designer - remote
+ui/ux designer - remote
+yo it consulting
+finland
+3 viikkoa sitten
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+myyjä 30h/vko, instrumentarium saarijärvi &amp; äänekoski
+instru optiikka oy
+saarijärvi
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (t1 certified)
+autonomous vehicle driver (t1 certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+freelance junior journalist - ai trainer
+freelance junior journalist - ai trainer
+mindrift
+finland
+ole varhainen hakija
+6 päivää sitten
+avoin hakemus nrc groupille
+avoin hakemus nrc groupille
+nrc group finland
+finland
+ole varhainen hakija
+1 kuukausi sitten
+site manager
+site manager
+crown
+helsinki
+ole varhainen hakija
+2 viikkoa sitten
+freelance web designer
+freelance web designer
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk receptionist
+front desk receptionist
+halo igloos
+rovaniemi
+1 kuukausi sitten
+canva user/specialist - remote
+canva user/specialist - remote
+yo it consulting
+finland
+3 viikkoa sitten
+copywriter - remote
+copywriter - remote
+yo it consulting
+finland
+ole varhainen hakija
+4 tuntia sitten
+content creator &amp; graphic designer
+content creator &amp; graphic designer
+rebl eats
+helsinki
+1 kuukausi sitten
+vp of investor relations (m/f/x)
+vp of investor relations (m/f/x)
+skeleton technologies
+helsinki
+ole varhainen hakija
+1 kuukausi sitten
+content marketing lead
+content marketing lead
+sandberg translation partners ltd
+finland
+ole varhainen hakija
+2 päivää sitten
+senior electrical engineer (m/f/x)
+senior electrical engineer (m/f/x)
+skeleton technologies
+lappeenranta
+ole varhainen hakija
+1 kuukausi sitten
+3d artist
+3d artist
+paradox interactive
+tampere
+1 kuukausi sitten
+restaurant server
+restaurant server
+halo igloos
+rovaniemi
+1 kuukausi sitten
+research physicist - freelance ai trainer
+research physicist - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+district sales executive
+district sales executive
+expeditors
+vantaa
+ole varhainen hakija
+1 kuukausi sitten
+data scientist (python &amp; sql) - freelance ai trainer
+data scientist (python &amp; sql) - freelance ai trainer
+mindrift
+finland
+ole varhainen hakija
+1 viikko sitten
+autonomous vehicle driver (bertha certified)
+autonomous vehicle driver (bertha certified)
+tsmg holding
+helsinki
+1 vuosi sitten
+machine learning developer (freelance)
+machine learning developer (freelance)
+mindrift
+finland
+ole varhainen hakija
+5 päivää sitten
+front desk representatives (rovaniemi)
+front desk representatives (rovaniemi)
+arctic gm &amp; sonka resort | the original aurora hunters®
+rovaniemi
+ole varhainen hakija
+1 päivä sitten
+senior global supply and demand planning manager
+senior global supply and demand planning manager
+dsj global
+helsinki
+1 kuukausi sitten
+work &amp; travel in greece (relocation support available)!
+work &amp; travel in greece (relocation support available)!
+fh collective - academy
+lahti
+ole varhainen hakija
+1 kuukausi sitten
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
+helsinki
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'test automation'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.050303" elapsed="0.000311">'sales assistant
+<status status="FAIL" start="2026-05-29T21:28:33.394014" elapsed="0.000432">'sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 emirates
 helsinki metropolitan area
-2 viikkoa sitten
+3 viikkoa sitten
 assistant controller
 assistant controller
 taideyliopisto
@@ -614,51 +1872,62 @@ puutuotteiden pakkaaja
 sol ☀
 riihimäki
 1 viikko sitten
-studio creative director
-studio creative director
-netflix
+    [ Message content over the limit has been removed. ]
+customer support (pacific time)
+customer support (pacific time)
+jobgether
+finland
+2 päivää sitten
+online marketing manager
+online marketing manager
+multiplechat
+finland
+2 kuukautta sitten
+(junior) youtube content specialist
+(junior) youtube content specialist
+rovio entertainment
 helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'test automation'</status>
+4 päivää sitten
+adventure house sales assistant
+adventure house sales assistant
+apukka resort
+rovaniemi
+1 kuukausi sitten' does not contain 'test automation'</status>
 </kw>
-<msg time="2026-05-28T21:37:50.050801" level="INFO">${found} = False</msg>
+<msg time="2026-05-29T21:28:33.394549" level="INFO">${found} = False</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.050185" elapsed="0.000645"/>
+<status status="PASS" start="2026-05-29T21:28:33.393933" elapsed="0.000636"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.051051" elapsed="0.000030"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.394712" elapsed="0.000019"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.051136" elapsed="0.000027"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.394766" elapsed="0.000015"/>
 </return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.050923" elapsed="0.000278"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.394629" elapsed="0.000175"/>
 </branch>
-<status status="PASS" start="2026-05-28T21:37:50.050904" elapsed="0.000339"/>
+<status status="PASS" start="2026-05-29T21:28:33.394616" elapsed="0.000212"/>
 </if>
 <var name="${substring}">test automation</var>
-<status status="PASS" start="2026-05-28T21:37:50.050106" elapsed="0.001166"/>
+<status status="PASS" start="2026-05-29T21:28:33.393876" elapsed="0.000968"/>
 </iter>
 <var>${substring}</var>
 <value>@{substrings}</value>
-<status status="PASS" start="2026-05-28T21:37:50.046235" elapsed="0.005088"/>
+<status status="PASS" start="2026-05-29T21:28:33.390031" elapsed="0.004843"/>
 </for>
 <kw name="Fail" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.051679" level="FAIL">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</msg>
+<msg time="2026-05-29T21:28:33.395079" level="FAIL">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</msg>
 <arg>None of the expected substrings were found in the text: ${substrings}</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.051472" elapsed="0.000269">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-29T21:28:33.394950" elapsed="0.000172">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </kw>
 <arg>${lower_text}</arg>
 <arg>test engineer</arg>
@@ -666,179 +1935,87 @@ ole varhainen hakija' does not contain 'test automation'</status>
 <arg>quality engineer</arg>
 <arg>test automation</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.045935" elapsed="0.005923">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-29T21:28:33.389797" elapsed="0.005410">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </kw>
 <doc>Check that visible job offers are for Test Engineer or similar positions</doc>
 <tag>Jobs</tag>
 <tag>Linkedin</tag>
 <tag>Verification</tag>
-<status status="FAIL" start="2026-05-28T21:37:49.832466" elapsed="0.219608">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
+<status status="FAIL" start="2026-05-29T21:28:33.190096" elapsed="0.205464">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation']</status>
 </test>
 <test id="s1-t6" name="Job Listings Are Located In Finland" line="137">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-05-28T21:37:50.257634" level="INFO">${page_text} = Sales Assistant
+<msg time="2026-05-29T21:28:33.505476" level="INFO">${page_text} = Sales Assistant
 Sales Assistant
 ZARA
 Helsinki
-5 päivää sitten
+6 päivää sitten
 Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 Helsinki Cabin Crew Opportunities (Dubai Based, Relocation Provided)
 ...</msg>
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.053001" elapsed="0.204679"/>
+<status status="PASS" start="2026-05-29T21:28:33.396351" elapsed="0.109171"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.258283" level="INFO">${lower_text} = sales assistant
+<msg time="2026-05-29T21:28:33.506163" level="INFO">${lower_text} = sales assistant
 sales assistant
 zara
 helsinki
-5 päivää sitten
+6 päivää sitten
 helsinki cabin crew opportunities (dubai based, relocation provided)
 helsinki cabin crew opportunities (dubai based, relocation provided)
 ...</msg>
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.257981" elapsed="0.000335"/>
+<status status="PASS" start="2026-05-29T21:28:33.505831" elapsed="0.000362"/>
 </kw>
 <kw name="Should Contain Any">
 <for flavor="IN">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.260572" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-5 päivää sitten
-helsinki cabin crew opportunities (dubai based, relocation provided)
-helsinki cabin crew opportunities (dubai based, relocation provided)
-emirates
-helsinki metropolitan area
-2 viikkoa sitten
-assistant controller
-assistant controller
-taideyliopisto
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-1 viikko sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'finland'</msg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-05-28T21:37:50.259215" elapsed="0.001447">'sales assistant
-sales assistant
-zara
-helsinki
-5 päivää sitten
-helsinki cabin crew opportunities (dubai based, relocation provided)
-helsinki cabin crew opportunities (dubai based, relocation provided)
-emirates
-helsinki metropolitan area
-2 viikkoa sitten
-assistant controller
-assistant controller
-taideyliopisto
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-1 viikko sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-1 viikko sitten
-cnc-koneistaja tampereelle
-cnc-koneistaja tampereelle
-sol ☀
-tampere
-ole varhainen hakija' does not contain 'finland'</status>
+<status status="PASS" start="2026-05-29T21:28:33.508332" elapsed="0.000179"/>
 </kw>
-<msg time="2026-05-28T21:37:50.260784" level="INFO">${found} = False</msg>
+<msg time="2026-05-29T21:28:33.508619" level="INFO">${found} = True</msg>
 <var>${found}</var>
 <arg>Should Contain</arg>
 <arg>${text}</arg>
 <arg>${substring}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.259110" elapsed="0.001704"/>
+<status status="PASS" start="2026-05-29T21:28:33.507104" elapsed="0.001541"/>
 </kw>
 <if>
 <branch type="IF" condition="${found}">
 <kw name="Log" owner="BuiltIn">
+<msg time="2026-05-29T21:28:33.508932" level="INFO">Found expected keyword: "finland"</msg>
 <arg>Found expected keyword: "${substring}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.261038" elapsed="0.000021"/>
+<status status="PASS" start="2026-05-29T21:28:33.508838" elapsed="0.000126"/>
 </kw>
 <return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.261100" elapsed="0.000018"/>
+<status status="PASS" start="2026-05-29T21:28:33.509003" elapsed="0.000034"/>
 </return>
-<status status="NOT RUN" start="2026-05-28T21:37:50.260920" elapsed="0.000224"/>
+<status status="PASS" start="2026-05-29T21:28:33.508727" elapsed="0.000339"/>
 </branch>
-<status status="PASS" start="2026-05-28T21:37:50.260889" elapsed="0.000281"/>
+<status status="PASS" start="2026-05-29T21:28:33.508708" elapsed="0.000387"/>
 </if>
 <var name="${substring}">finland</var>
-<status status="PASS" start="2026-05-28T21:37:50.259028" elapsed="0.002160"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.261436" elapsed="0.000106"/>
-</kw>
-<msg time="2026-05-28T21:37:50.261606" level="INFO">${found} = True</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.261348" elapsed="0.000276"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-05-28T21:37:50.261841" level="INFO">Found expected keyword: "helsinki"</msg>
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.261759" elapsed="0.000111"/>
-</kw>
-<return>
-<status status="PASS" start="2026-05-28T21:37:50.261907" elapsed="0.000027"/>
-</return>
-<status status="PASS" start="2026-05-28T21:37:50.261679" elapsed="0.000284"/>
-</branch>
-<status status="PASS" start="2026-05-28T21:37:50.261667" elapsed="0.000322"/>
-</if>
-<var name="${substring}">helsinki</var>
-<status status="PASS" start="2026-05-28T21:37:50.261287" elapsed="0.000722"/>
+<status status="PASS" start="2026-05-29T21:28:33.507022" elapsed="0.002094"/>
 </iter>
 <var>${substring}</var>
 <value>@{substrings}</value>
-<status status="PASS" start="2026-05-28T21:37:50.258873" elapsed="0.003168"/>
+<status status="PASS" start="2026-05-29T21:28:33.506870" elapsed="0.002281"/>
 </for>
 <kw name="Fail" owner="BuiltIn">
 <arg>None of the expected substrings were found in the text: ${substrings}</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-05-28T21:37:50.262114" elapsed="0.000109"/>
+<status status="NOT RUN" start="2026-05-29T21:28:33.509226" elapsed="0.000018"/>
 </kw>
 <arg>${lower_text}</arg>
 <arg>finland</arg>
@@ -848,32 +2025,32 @@ ole varhainen hakija' does not contain 'finland'</status>
 <arg>oulu</arg>
 <arg>turku</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="PASS" start="2026-05-28T21:37:50.258653" elapsed="0.003628"/>
+<status status="PASS" start="2026-05-29T21:28:33.506620" elapsed="0.002669"/>
 </kw>
 <doc>Verify that job offers are in proper location</doc>
 <tag>Dinland</tag>
 <tag>linkedin</tag>
 <tag>Verification</tag>
-<status status="PASS" start="2026-05-28T21:37:50.052607" elapsed="0.209918"/>
+<status status="PASS" start="2026-05-29T21:28:33.395994" elapsed="0.113529"/>
 </test>
 <doc>pip install robotframework robotframework-seleniumlibrary
 ChromeDriver (or GeckoDriver) matching browser version</doc>
-<status status="FAIL" start="2026-05-28T21:37:38.090836" elapsed="12.172197"/>
+<status status="FAIL" start="2026-05-29T21:28:20.111023" elapsed="13.399026"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="2" skip="0">All Tests</stat>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Dinland</stat>
 <stat pass="1" fail="0" skip="0">Easy</stat>
 <stat pass="2" fail="1" skip="0">Jobs</stat>
 <stat pass="3" fail="1" skip="0">LinkedIn</stat>
-<stat pass="3" fail="1" skip="0">Smoke</stat>
+<stat pass="4" fail="0" skip="0">Smoke</stat>
 <stat pass="1" fail="1" skip="0">Verification</stat>
 </tag>
 <suite>
-<stat name="Linkedin" id="s1" pass="4" fail="2" skip="0">Linkedin</stat>
+<stat name="Linkedin" id="s1" pass="5" fail="1" skip="0">Linkedin</stat>
 </suite>
 </statistics>
 <errors>
