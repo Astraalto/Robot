@@ -130,6 +130,8 @@ Job Search Returns Results
 Job Listings Contain Relevant Keywords
     [Documentation]                Check that visible job offers are for Test Engineer or similar positions
     [Tags]                         Verification   Linkedin    Jobs
+    Wait Until Element Is Visible    ${RESULTS_CONTAINER}    timeout=30s
+    Wait Until Page Contains Element    ${JOB_CARD_SELECTOR}    timeout=30s
     ${page_text}=        Get Text    ${RESULTS_CONTAINER}
     ${lower_text}=       Evaluate    $page_text.lower()
     Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer    test automation
