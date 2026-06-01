@@ -128,13 +128,14 @@ Job Search Returns Results
     ...    Expected at least ${MIN_RESULTS} result(s), but got ${count}
 
 Job Listings Contain Relevant Keywords
-    [Documentation]                Check that visible job offers are for Test Engineer or similar positions
-    [Tags]                         Verification   Linkedin    Jobs
+    [Documentation]    Spot-check that visible job cards mention Test Engineer or related terms.
+    [Tags]    validation    linkedin    jobs
     Wait Until Element Is Visible    ${RESULTS_CONTAINER}    timeout=30s
     Wait Until Page Contains Element    ${JOB_CARD_SELECTOR}    timeout=30s
-    ${page_text}=        Get Text    ${RESULTS_CONTAINER}
-    ${lower_text}=       Evaluate    $page_text.lower()
-    Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer    test automation
+    ${page_text}=    Get Text    ${RESULTS_CONTAINER}
+    ${lower_text}=    Evaluate    $page_text.lower()
+    Should Contain Any    ${lower_text}    test engineer    qa engineer    quality engineer
+    ...    test automation    testiautomaatio    laadunvarmistus    testaaja    tester
 
 Job Listings Are Located In Finland
     [Documentation]                Verify that job offers are in proper location
