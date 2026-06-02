@@ -43,8 +43,9 @@ Fill In Job Title Search Field
     Wait Until Element Is Visible      ${title_field}
     Clear Element Text                 ${title_field}
     Click Element                      ${title_field}
-    Input Text                         ${title_field}    ${JOB_TITLE}
-    Log    Entered job title: ${JOB_TITLE}
+    Input Text    ${title_field}    ${JOB_TITLE}
+    ${value}=    Get Element Attribute    ${title_field}    value
+    Log    Field value after input: ${value}    level=WARN
 
 Fill In Location Search Field
     [Documentation]  Clears and fills location search field
