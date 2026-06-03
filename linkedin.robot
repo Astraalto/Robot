@@ -77,7 +77,8 @@ Submit Job Search
     [Documentation]      Execute searching by clicking Search button
     ${location_field}=   Set Variable   css:#job-search-bar-location
     Press Keys           ${location_field}     RETURN
-    Log                  Search form submitted
+    ${url}=    Get Location
+    Log    URL after search: ${url}    level=WARN
 
 Should Contain Any
     [Documentation]    Passes if the given text contains at least one of the provided substrings.
