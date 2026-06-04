@@ -19,7 +19,6 @@ ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
 ${ACCEPT}               css:button.artdeco-global-alert-action:nth-child(1)
 ${CLOSE WINDOW}         css:#base-contextual-sign-in-modal > div > section > button > icon > svg > path
-${CLOSE_SIGNIN}         css:.modal__overlay--visible > section:nth-child(1) > button:nth-child(1) > icon:nth-child(1) > svg:nth-child(1)
 
 *** Keywords ***
 
