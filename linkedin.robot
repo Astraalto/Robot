@@ -91,6 +91,13 @@ Should Contain Any
     END
     Fail    None of the expected substrings were found in the text: ${substrings}
 
+Apply Remote Filter
+    [Documentation]    Clicks the Remote filter option on the results page.
+    ${remote_filter}=    Set Variable    css:button[aria-label*="Remote"]
+    Wait Until Element Is Visible    ${remote_filter}    timeout=15s
+    Click Element                    ${remote_filter}
+    Log    Remote filter applied
+
 *** Test Cases ***
 
 Test Engineer Finland
