@@ -19,6 +19,16 @@ ${JOB_CARD_SELECTOR}    css:.jobs-search__results-list li
 ${RESULTS_CONTAINER}    css:.jobs-search__results-list
 ${ACCEPT}               css:button.artdeco-global-alert-action:nth-child(1)
 ${CLOSE WINDOW}         css:#base-contextual-sign-in-modal > div > section > button > icon > svg > path
+${JOB_TITLES}           Test Engineer
+...                     QA Engineer
+...                     Test Analyst
+...                     Test Automation Engineer
+${CITIES}               Helsinki
+...                     Espoo
+...                     Tampere
+...                     Vantaa
+...                     Turku
+...                     Oulu
 
 *** Keywords ***
 
@@ -151,4 +161,18 @@ Job Listings Are Located In Finland
     ${page_text}=        Get Text    ${RESULTS_CONTAINER}
     ${lower_text}=       Evaluate    $page_text.lower()
     Should Contain Any    ${lower_text}    finland    helsinki    tampere    espoo    oulu    turku
-    
+
+Search Returns Results For QA Titles
+    [Documentation]       Verify that search returns results for related QA titles
+    [Tags]                search    titles    linkedin 
+    FOR     ${title}    IN   @{JOB_TITLES}
+        Log   /nSearching for:  ${title}  in Finland    # level=WARN
+        Navigate To Linkedin Jobs
+        Fill In Search Fields   ${title}    Finland
+        Wait Until Results Are Loaded
+        ${count}=   Get Job Results Count
+        Log   Found  ${count}  result(s)  for  "${title}"   #  level=WARN
+        Should Be True     ${count}  >=  ${MIN_RESULTS}   
+        ...      Expected at least ${MIN_RESULTS} results(s) for "${title}", got ${count}
+    END 
+
