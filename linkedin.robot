@@ -6,6 +6,7 @@ Documentation
 
 
 Library     SeleniumLibrary     timeout=15s    implicit_wait=3s
+Library     RequestsLibrary
 
 
 *** Variables ***
@@ -110,8 +111,13 @@ Apply Remote Filter
 
 *** Test Cases ***
 
-Test Engineer Finland
-    [Documentation] 
+Request Check Linkedin Page
+    [Documentation]              Check if Linkedin page is working
+    [Tags]                       Smoke Easy
+    ${response}=    GET  https://www.linkedin.com/  params=query=ciao  expected_status=200
+
+Test Engineer Finland            
+    [Documentation]               Simple check
     [Tags]                        Smoke     Easy
     Open Browser                  ${URL_ALL}       ${BROWSER} 
     Wait Until Results Are Loaded
