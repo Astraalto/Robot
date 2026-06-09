@@ -182,3 +182,16 @@ Search Returns Results For QA Titles
         ...      Expected at least ${MIN_RESULTS} results(s) for "${title}", got ${count}
     END 
 
+Search Returns Results In Finnish Cities
+    [Documentation]    Verify Test Engineer search returns results in major Finnish cities.
+    [Tags]    search    cities    linkedin
+    FOR    ${city}    IN    @{CITIES}
+        Log    \nSearching for Test Engineer in: ${city}    level=WARN
+        Navigate To LinkedIn Jobs
+        Fill In Search Fields    Test Engineer    ${city}
+        Wait Until Results Are Loaded
+        ${count}=    Get Job Results Count
+        Log    Found ${count} result(s) in ${city}    level=WARN
+        Should Be True    ${count} >= ${MIN_RESULTS}
+        ...    Expected at least ${MIN_RESULTS} result(s) in "${city}", got ${count}
+    END
