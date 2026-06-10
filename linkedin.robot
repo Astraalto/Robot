@@ -12,6 +12,7 @@ Library     RequestsLibrary
 *** Variables ***
 ${URL_ALL}              https://www.linkedin.com/jobs/search?keywords=Test+Engineer&location=Finland&geoId=
 ${URL}                  https://www.linkedin.com/jobs/search?keywords=&location=Finland&geoId=100456013&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0
+${JOBS_URL}             https://www.linkedin.com/jobs/search/
 ${BROWSER}              chrome
 ${JOB_TITLE}            Test Engineer
 ${JOB_LOCATION}         Finland
@@ -46,6 +47,11 @@ Accept LinkedIn Cookies
     Wait Until Element Is Visible  ${ACCEPT}     timeout=5s
     Click Element                  ${ACCEPT}  
     Log                            Cookies accepted
+
+Navigate To LinkedIn Jobs
+    [Documentation]    Navigates back to the LinkedIn Jobs base URL for a fresh search.
+    Go To    ${JOBS_URL}
+    Wait Until Element Is Visible    css:#job-search-bar-keywords    timeout=30s
 
 Fill In Job Title Search Field
     [Documentation]    Clears and fills the job title input field.
