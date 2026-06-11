@@ -115,6 +115,18 @@ Apply Remote Filter
     Click Element                    ${remote_filter}
     Log    Remote filter applied
 
+Fill In Search Fields
+    [Documentation]    Fills in both the title and location search fields and submits.
+    [Arguments]    ${title}    ${location}
+    ${title_field}=       Set Variable    css:#job-search-bar-keywords
+    ${location_field}=    Set Variable    css:#job-search-bar-location
+    Wait Until Element Is Visible    ${title_field}
+    Click Element Three Times        ${title_field}
+    Input Text                       ${title_field}    ${title}
+    Click Element Three Times        ${location_field}
+    Input Text                       ${location_field}    ${location}
+    Press Keys                       ${location_field}    RETURN
+
 *** Test Cases ***
 
 Request Check Linkedin Page
