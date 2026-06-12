@@ -213,3 +213,16 @@ Search Returns Results In Finnish Cities
         Should Be True    ${count} >= ${MIN_RESULTS}
         ...    Expected at least ${MIN_RESULTS} result(s) in "${city}", got ${count}
     END
+
+Search With Full Time Filter Returns Results
+    [Documentation]    Verify Test Engineer full-time jobs are available in Finland.
+    [Tags]    search    filters    fulltime    linkedin
+    Navigate To LinkedIn Jobs
+    Fill In Search Fields    Test Engineer    Finland
+    Wait Until Results Are Loaded
+    Apply Full Time Filter
+    Wait Until Results Are Loaded
+    ${count}=    Get Job Results Count
+    Log    Found ${count} full-time result(s)    level=WARN
+    Should Be True    ${count} >= ${MIN_RESULTS}
+    ...    Expected at least ${MIN_RESULTS} full-time result(s), got ${count}
