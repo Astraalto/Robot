@@ -127,6 +127,16 @@ Fill In Search Fields
     Input Text                       ${location_field}    ${location}
     Press Keys                       ${location_field}    RETURN
 
+Apply Full Time Filter
+    [Documentation]    Opens the job type filter and selects Full-time.
+    ${jobtype_button}=    Set Variable    css:button[aria-label*="Job type"]
+    Wait Until Element Is Visible    ${jobtype_button}    timeout=15s
+    Click Element                    ${jobtype_button}
+    ${fulltime_option}=    Set Variable    css:label[for*="full-time"], css:label[for*="fullTime"]
+    Wait Until Element Is Visible    ${fulltime_option}    timeout=10s
+    Click Element                    ${fulltime_option}
+    Press Keys                       NONE    RETURN
+
 *** Test Cases ***
 
 Request Check Linkedin Page
