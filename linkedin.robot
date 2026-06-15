@@ -115,6 +115,16 @@ Apply Remote Filter
     Click Element                    ${remote_filter}
     Log    Remote filter applied
 
+Apply Full Time Filter
+    [Documentation]    Opens the job type filter and selects Full-time.
+    ${jobtype_button}=    Set Variable    css:button[aria-label*="Job type"]
+    Wait Until Element Is Visible    ${jobtype_button}    timeout=15s
+    Click Element                    ${jobtype_button}
+    ${fulltime_option}=    Set Variable    css:label[for*="full-time"], css:label[for*="fullTime"]
+    Wait Until Element Is Visible    ${fulltime_option}    timeout=10s
+    Click Element                    ${fulltime_option}
+    Press Keys                       NONE    RETURN
+
 Fill In Search Fields
     [Documentation]    Fills in both the title and location search fields and submits.
     [Arguments]    ${title}    ${location}
@@ -126,16 +136,6 @@ Fill In Search Fields
     Click Element Three Times        ${location_field}
     Input Text                       ${location_field}    ${location}
     Press Keys                       ${location_field}    RETURN
-
-Apply Full Time Filter
-    [Documentation]    Opens the job type filter and selects Full-time.
-    ${jobtype_button}=    Set Variable    css:button[aria-label*="Job type"]
-    Wait Until Element Is Visible    ${jobtype_button}    timeout=15s
-    Click Element                    ${jobtype_button}
-    ${fulltime_option}=    Set Variable    css:label[for*="full-time"], css:label[for*="fullTime"]
-    Wait Until Element Is Visible    ${fulltime_option}    timeout=10s
-    Click Element                    ${fulltime_option}
-    Press Keys                       NONE    RETURN
 
 *** Test Cases ***
 

@@ -1,1114 +1,582 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-06-03T21:12:24.298673" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2026-06-15T23:41:57.567289" rpa="false" schemaversion="5">
 <suite id="s1" name="Linkedin" source="F:\Repos\Robot\linkedin.robot">
-<test id="s1-t1" name="Test Engineer Finland" line="97">
+<test id="s1-t1" name="Request Check Linkedin Page" line="142">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-06-15T23:41:58.438991" level="INFO">GET Request : url=https://www.linkedin.com/?query=ciao 
+ path_url=/?query=ciao 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-06-15T23:41:58.439220" level="INFO">GET Response : url=https://www.linkedin.com/?query=ciao 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 15 Jun 2026 20:41:07 GMT', 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '16527', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=ajax:2198788960284931644; Domain=.www.linkedin.com; Path=/; Secure; SameSite=None, lang=v=2&amp;lang=en-us; Domain=linkedin.com; Path=/; Secure; SameSite=None, bcookie="v=2&amp;f3964328-0536-4e53-8bcd-36c301222f55"; Domain=.linkedin.com; Expires=Tue, 15-Jun-2027 20:41:07 GMT; Path=/; Secure; SameSite=None, bscookie="v=1&amp;2026061520410777a936df-180c-4217-8d26-bb3bedda713dAQGpu5KQWViAJnIiWiAe6JOq8GjTB9iy"; Domain=.www.linkedin.com; Expires=Tue, 15-Jun-2027 20:41:07 GMT; Path=/; HttpOnly; Secure; SameSite=None, li_gc=MTswOzE3ODE1NTYwNjc7MjswMjGGQscRW7ZXvQ5scwAK7q1jsy3ck+6uLvNgfZN3gmRHXQ==; Domain=.linkedin.com; Expires=Sat, 12 Dec 2026 20:41:07 GMT; Path=/; Secure; SameSite=None, lidc="b=TGST04:s=T:r=T:a=T:p=T:g=3711:u=1:x=1:i=1781556067:t=1781642467:v=2:sig=AQEUZdTtwxwf80SoAZdrMf3C7Jszo7iM"; Expires=Tue, 16 Jun 2026 20:41:07 GMT; domain=.linkedin.com; Path=/; SameSite=None; Secure, __cf_bm=uNoEbDnq5zyj3qOsPdpataCIf4dNZwvk9538UeoWyZY-1781556067.0160646-1.0.1.1-fV4PwipP_L4fcvqG1yIs0nzHUm.IrXcJdtb_xlNgFWvQGQZOAuR_g3vJbvlrtu9SQGPkHqk5AWY95b.wsP513UbGcAPWJiXBUfgCkPy23LwJY4qrdYt84PIw9V_GDuYQ; HttpOnly; SameSite=None; Secure; Path=/; Domain=linkedin.com; Expires=Mon, 15 Jun 2026 21:11:07 GMT', 'Strict-Transport-Security': 'max-age=31536000', 'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'sameorigin', 'Content-Security-Policy': "default-src 'none'; connect-src 'self' *.licdn.com *.linkedin.com cdn.linkedin.oribi.io dpm.demdex.net/id lnkd.demdex.net blob: accounts.google.com/gsi/ linkedin.sc.omtrdc.net/b/ss/ v.clarity.ms/collect *.microsoft.com *.adnxs.com *.tealiumiq.com login.microsoftonline.com bat.bing.com lnkd.tt.omtrdc.net/rest/v1/delivery www.google.com google.com adservice.google.com pagead2.googlesyndication.com td.doubleclick.net www.googletagmanager.com www.googleadservices.com ad.doubleclick.net googleads.g.doubleclick.net; script-src 'report-sample' 'sha256-th47JTnh6tX15SUn/I+GGmsOSXpa7dh5Skner77gxlY=' 'sha256-SSoodjUD3LGm2FfFCVHGqEb8D4UM3OOigidT2UKDcYg=' 'sha256-cKTgdnmO6+hXd85a9wKg1effVfVzenUAtUCyOKY9bQE=' 'sha256-DwtT8+ZZKpxH9pqZNAmJ3GdbLAh5SsYaXR3omTXPCns=' 'sha256-sV9jZa797T0QWBzcU/CNd4tpBhTnh+TFdLnfjlitl28=' 'sha256-aa/Q8CRBDSqTQbCIyioPhZaz+G+dbPyu7BzsjInEmiU=' 'sha256-THuVhwbXPeTR0HszASqMOnIyxqEgvGyBwSPBKBF/iMc=' 'sha256-zTIusdVJJeXz9+iox2a+pdDglzbpRpFVRzEwvW4AONk=' 'sha256-iC8MPqNLw0FDnsBf4DlSkFLNTwhkI85aouiAEB819ic=' 'sha256-2EqrEvcPzl8c6/TSGVvaVMEe7lg700MAz/te4/3kTYY=' 'sha256-y5uW69VItKj51mcc7UD9qfptDVUqicZL+bItEpvVNDw=' 'sha256-DatsFGoJ8gFkzzxo47Ou76WZ+3QBPOQHtBu9p9b3DhA=' 'sha256-k95cyM8gFgPziZe5VQ2IvJvBUVyd5zFt2CokIUwqdHE=' 'sha256-PyCXNcEkzRWqbiNr087fizmiBBrq9O6GGD8eV3P09Ik=' 'sha256-RFqsjmAF1N5LnfpaHFvPqFlVkeIS/DtTAFor+JjJJVc=' 'sha256-2SQ55Erm3CPCb+k03EpNxU9bdV3XL9TnVTriDs7INZ4=' 'sha256-S/KSPe186K/1B0JEjbIXcCdpB97krdzX05S+dHnQjUs=' 'sha256-9pXOIwF4N0gPltLd3AI69lkCjSC2H/Eb3sc5zdmUyYU=' 'sha256-jou6v/Nleyzoc+LXktAv1Fp8M807dVVxy7E/yzVljHc=' 'sha256-6E4e/3dSvj/8JZT2S2yR91mspqM6MyOpKl5lrhHsZa8=' 'sha256-JfJ82reKxtqugVbfRGw/O/1x1Lm1I09rHueXSwvbRws=' 'sha256-BbV1i75oYRtLtfDWs7tnA8QLF5EOO1dVHKL0prVd/fQ=' 'sha256-3woF8BZ54TeXM+czaH3aXoaJsVpiamuAKFsXDykAR/Q=' 'sha256-vIfNcKb8ixJg1cfJIoNNYjWcm0lezj1/XpUNFiZyVsU=' 'sha256-cLsHUHFgT/VGX04cZrJ9xgm4HbzTR7ptutkxK+7BlMk=' 'sha256-BwU8jMnQYUhjOpsDVABpfddV/DlP1ZYrFcTumYw7x54=' 'sha256-wz6ika9i3WU3bpUPdhYDZeO/NrDQniDyiscN0LWnyaY=' 'sha256-3RIGhhApBii1KY+aW1xk7kFyoQY8vSVE5DfT7E9SJUc=' static.licdn.com static-exp1.licdn.com static-exp2.licdn.com static-exp3.licdn.com platform.linkedin.com platform-akam.linkedin.com platform-ecst.linkedin.com platform-azur.linkedin.com snap.licdn.com www.google.com/recaptcha/enterprise.js www.gstatic.com/recaptcha/releases/ www.googletagmanager.com/gtag/js www.googletagmanager.com/gtag/destination googleads.g.doubleclick.net/pagead/viewthroughconversion/ merchantpool1.linkedin.com/mdt.js; img-src data: blob: * 'self' *.licdn.com android-webview-video-poster:; font-src data: * 'self' *.licdn.com; style-src 'self' 'unsafe-inline' static.licdn.com static-exp1.licdn.com static-exp2.licdn.com static-exp3.licdn.com; media-src 'self' *.licdn.com *.lynda.com; worker-src 'self' blob: static.licdn.com static-exp1.licdn.com static-exp2.licdn.com static-exp3.licdn.com; frame-src 'self' www.youtube.com/embed/ www.youtube-nocookie.com/embed/ lnkd.demdex.net smartlock.google.com accounts.google.com player.vimeo.com *.linkedin.com www.slideshare.net *.megaphone.fm *.omny.fm *.sounder.fm msit.powerbi.com app.powerbi.com linkedin.github.io *.licdn.com *.adnxs.com acdn.adnxs-simple.com radar.cedexis.com edge-auth.microsoft.com flo.uri.sh play.vidyard.com www.google.com/recaptcha/ aat-acr-web-prod.azurewebsites.net *.fls.doubleclick.net www.googletagmanager.com td.doubleclick.net li.protechts.net *.xlgmedia.com *.px-cloud.net merchantpool1.linkedin.com; frame-ancestors 'self' *.www.linkedin.com:*; manifest-src 'self'; report-uri https://www.linkedin.com/security/csp?f=gg", 'X-Li-Fabric': 'prod-ltx1', 'Pragma': 'no-cache', 'Expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'Cache-Control': 'no-cache, no-store, no-transform', 'X-Li-Pop': 'cf-prod-ltx1-x', 'X-Li-Proto': 'http/1.1', 'X-LI-UUID': 'AAZUUNiHEznnNyojdkAnSg==', 'cf-cache-status': 'DYNAMIC', 'CF-RAY': 'a0c464cadd448d5a-HEL', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body=&lt;!DOCTYPE html&gt;
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;meta name="pageKey" content="d_homepage-guest-home"&gt;
+&lt;!----&gt;&lt;!----&gt;&lt;!----&gt;        &lt;meta name="locale" content="en_US"&gt;
+&lt;!----&gt;        &lt;meta id="config" data-app-version="2.1.2917.1" data-call-tree-id="AAZUUNiHEznnNyojdkAnSg==" data-jet-tags="guest-homepage" data-multiproduct-name="homepage-guest-frontend" data-service-name="homepage-guest-frontend" data-browser-id="f3964328-0536-4e53-8bcd-36c301222f55" data-is-bot="true" data-enable-page-view-heartbeat-tracking data-page-instance="urn:li:page:d_homepage-guest-home;4BwoqWQzTbKwAKae2Hdq+A==" data-disable-jsbeacon-pagekey-suffix="false" data-member-id="0" data-should-use-full-url-in-pve-path="true" data-dna-member-lix-treatment="enabled" data-human-member-lix-treatment="enabled" data-dfp-member-lix-treatment="enabled" data-sync-apfc-headers-lix-treatment="control" data-sync-apfc-cb-lix-treatment="control" data-recaptcha-v3-integration-lix-value="control" data-network-interceptor-lix-value="control" data-is-epd-audit-event-enabled="true" data-is-feed-sponsored-tracking-kill-switch-enabled="false" data-sequence-auto-redirect-before-request-enabled="true"&gt;
+
+        &lt;link rel="canonical" href="https://www.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="de" href="https://de.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-IE" href="https://ie.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="uk-UA" href="https://ua.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-US" href="https://www.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="pt" href="https://pt.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-IL" href="https://il.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ms-MY" href="https://my.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-IN" href="https://in.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-BO" href="https://bo.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-ZA" href="https://za.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="zh-CN" href="https://cn.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="uk" href="https://ua.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-AU" href="https://au.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="id" href="https://id.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-NG" href="https://ng.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="de-CH" href="https://ch.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ja-JP" href="https://jp.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-ZW" href="https://zw.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-JM" href="https://jm.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-SV" href="https://sv.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ms" href="https://my.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-GT" href="https://gt.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en" href="https://www.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-CR" href="https://cr.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="it" href="https://it.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-CL" href="https://cl.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es" href="https://es.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="zh" href="https://cn.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-CO" href="https://co.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-PE" href="https://pe.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ar" href="https://ae.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-NZ" href="https://nz.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="pt-PT" href="https://pt.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="vi" href="https://vn.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-PA" href="https://pa.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ja" href="https://jp.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-SG" href="https://sg.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="fr-FR" href="https://fr.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ro" href="https://ro.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="vi-VN" href="https://vn.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-GB" href="https://uk.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="nl" href="https://nl.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-KE" href="https://ke.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="no" href="https://no.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-CA" href="https://ca.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ru" href="https://ru.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-GH" href="https://gh.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-PR" href="https://pr.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="fr" href="https://fr.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-DO" href="https://do.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="de-AT" href="https://at.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-EC" href="https://ec.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="cs-CZ" href="https://cz.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-PH" href="https://ph.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-PK" href="https://pk.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="de-DE" href="https://de.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="sv" href="https://se.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="ko" href="https://kr.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-TT" href="https://tt.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="zh-TW" href="https://tw.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="en-HK" href="https://hk.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="pt-BR" href="https://br.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-UY" href="https://uy.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-ES" href="https://es.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-VE" href="https://ve.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-MX" href="https://mx.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="cs" href="https://cz.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="es-AR" href="https://ar.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="th" href="https://th.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="sv-SE" href="https://se.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="tl" href="https://ph.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="da-DK" href="https://dk.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="fr-LU" href="https://lu.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="pl" href="https://pl.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="da" href="https://dk.linkedin.com/"&gt;
+          &lt;link rel="alternate" hreflang="tr" href="https://tr.linkedin.com/"&gt;
+            &lt;link rel="alternate" hreflang="x-default" href="https://www.linkedin.com/"&gt;
+
+&lt;!----&gt;
+&lt;!----&gt;
+          &lt;meta property="al:android:url" content="https://www.linkedin.com/"&gt;
+          &lt;meta property="al:android:package" content="com.linkedin.android"&gt;
+          &lt;meta property="al:android:app_name" content="LinkedIn"&gt;
+          &lt;meta property="al:ios:url" content="https://www.linkedin.com/"&gt;
+          &lt;meta property="al:ios:app_store_id" content="288429040"&gt;
+          &lt;meta property="al:ios:app_name" content="LinkedIn"&gt;
+
+&lt;!----&gt;
+          &lt;link rel="icon" href="https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca"&gt;
+
+
+        &lt;script&gt;
+          function getDfd() {let yFn,nFn;const p=new Promise(function(y, n){yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}
+          window.lazyloader = getDfd();
+          window.tracking = getDfd();
+          window.impressionTracking = getDfd();
+          window.ingraphTracking = getDfd();
+          window.appDetection = getDfd();
+          window.pemTracking = getDfd();
+          window.appRedirectCompleted = getDfd();
+        &lt;/script&gt;
+
+&lt;!----&gt;
+        
+        
+
+    
+
+    &lt;title&gt;LinkedIn: Log In or Sign Up&lt;/title&gt;
+    &lt;meta property="og:site_name" content="LinkedIn"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;meta property="og:title" content="LinkedIn: Log In or Sign Up"&gt;
+    &lt;meta property="og:description" content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities."&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta property="og:url" content="https://www.linkedin.com/"&gt;
+    &lt;meta name="twitter:card" content="summary"&gt;
+    &lt;meta name="twitter:site" content="@linkedin"&gt;
+    &lt;meta name="twitter:title" content="LinkedIn: Log In or Sign Up"&gt;
+    &lt;meta name="twitter:description" content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities."&gt;
+    &lt;meta name="description" content="1 billion members | Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities."&gt;
+    &lt;meta name="linkedin:pageTag" content="basic"&gt;
+      &lt;meta name="naver-site-verification" content="6c180087cc8c9aef0b448521383709b955b7dc5b"&gt;
+    &lt;meta name="litmsProfileName" content="homepage-guest-frontend"&gt;
+&lt;!----&gt;    &lt;meta name="robots" content="noarchive"&gt;
+  
+ ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-06-15T23:41:58.439729" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>https://www.linkedin.com/</arg>
+<arg>params=query=ciao</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2026-06-15T23:41:57.842434" elapsed="0.597322"/>
+</kw>
+<doc>Check if Linkedin page is working</doc>
+<tag>Smoke Easy</tag>
+<status status="PASS" start="2026-06-15T23:41:57.841647" elapsed="0.598349"/>
+</test>
+<test id="s1-t2" name="Test Engineer Finland" line="147">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:24.523680" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
+<msg time="2026-06-15T23:41:58.440869" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=Test+Engineer&amp;location=Finland&amp;geoId='.</msg>
 <arg>${URL_ALL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T21:12:24.523300" elapsed="2.882009"/>
+<status status="PASS" start="2026-06-15T23:41:58.440676" elapsed="4.089632"/>
 </kw>
 <kw name="Wait Until Results Are Loaded">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${RESULTS_CONTAINER}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T21:12:27.406081" elapsed="0.478454"/>
+<status status="PASS" start="2026-06-15T23:42:02.531100" elapsed="0.517095"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T21:12:28.885099" level="INFO">Slept 1 second.</msg>
-<msg time="2026-06-03T21:12:28.885179" level="INFO">Allow dynamic content to fully render</msg>
+<msg time="2026-06-15T23:42:04.048669" level="INFO">Slept 1 second.</msg>
+<msg time="2026-06-15T23:42:04.048745" level="INFO">Allow dynamic content to fully render</msg>
 <arg>1s</arg>
 <arg>reason=Allow dynamic content to fully render</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T21:12:27.884690" elapsed="1.000551"/>
+<status status="PASS" start="2026-06-15T23:42:03.048364" elapsed="1.000442"/>
 </kw>
 <doc>Waits for the job results appear on the page</doc>
-<status status="PASS" start="2026-06-03T21:12:27.405728" elapsed="1.479619"/>
+<status status="PASS" start="2026-06-15T23:42:02.530795" elapsed="1.518116"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-03T21:12:28.885584" elapsed="0.032471"/>
+<status status="PASS" start="2026-06-15T23:42:04.049118" elapsed="0.025407"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:28.918595" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
+<msg time="2026-06-15T23:42:04.075121" level="INFO">Clicking element 'css:#base-contextual-sign-in-modal &gt; div &gt; section &gt; button &gt; icon &gt; svg &gt; path'.</msg>
 <arg>${CLOSE WINDOW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:28.918329" elapsed="0.049648"/>
+<status status="PASS" start="2026-06-15T23:42:04.074832" elapsed="0.048632"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T21:12:31.968699" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-06-15T23:42:07.124140" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T21:12:28.968214" elapsed="3.000591"/>
+<status status="PASS" start="2026-06-15T23:42:04.123726" elapsed="3.000521"/>
 </kw>
+<doc>Simple check</doc>
 <tag>Easy</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-06-03T21:12:24.522416" elapsed="7.446665"/>
+<status status="PASS" start="2026-06-15T23:41:58.440324" elapsed="8.684226"/>
 </test>
-<test id="s1-t2" name="Search For Test Engineer Jobs In Finland" line="106">
+<test id="s1-t3" name="Search For Test Engineer Jobs In Finland" line="156">
 <kw name="Fill In Job Title Search Field">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-03T21:12:31.972554" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
+<msg time="2026-06-15T23:42:07.125905" level="INFO">${title_field} = css:#job-search-bar-keywords</msg>
 <var>${title_field}</var>
 <arg>css:#job-search-bar-keywords</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-03T21:12:31.972416" elapsed="0.000167"/>
+<status status="PASS" start="2026-06-15T23:42:07.125773" elapsed="0.000159"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T21:12:31.972677" elapsed="0.010824"/>
+<status status="PASS" start="2026-06-15T23:42:07.126018" elapsed="0.012175"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${title_field}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:31.983582" elapsed="0.021240"/>
+<status status="PASS" start="2026-06-15T23:42:07.138289" elapsed="0.020906"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.005202" level="INFO">Clicking element 'css:#job-search-bar-keywords'.</msg>
+<msg time="2026-06-15T23:42:07.159491" level="INFO">Clicking element 'css:#job-search-bar-keywords'.</msg>
 <arg>${title_field}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.004991" elapsed="0.032241"/>
+<status status="PASS" start="2026-06-15T23:42:07.159314" elapsed="0.035165"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.037615" level="INFO">Typing text 'Test Engineer' into text field 'css:#job-search-bar-keywords'.</msg>
+<msg time="2026-06-15T23:42:07.194916" level="INFO">Typing text 'Test Engineer' into text field 'css:#job-search-bar-keywords'.</msg>
 <arg>${title_field}</arg>
 <arg>${JOB_TITLE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.037374" elapsed="0.033302"/>
+<status status="PASS" start="2026-06-15T23:42:07.194665" elapsed="0.035030"/>
 </kw>
 <kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.077620" level="INFO">${value} = Test Engineer</msg>
+<msg time="2026-06-15T23:42:07.237817" level="INFO">${value} = Test Engineer</msg>
 <var>${value}</var>
 <arg>${title_field}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.070821" elapsed="0.006832"/>
+<status status="PASS" start="2026-06-15T23:42:07.229846" elapsed="0.008007"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:32.077906" level="WARN">Field value after input: Test Engineer</msg>
+<msg time="2026-06-15T23:42:07.238131" level="WARN">Field value after input: Test Engineer</msg>
 <arg>Field value after input: ${value}</arg>
 <arg>level=WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.077754" elapsed="0.000378"/>
+<status status="PASS" start="2026-06-15T23:42:07.237980" elapsed="0.000422"/>
 </kw>
 <doc>Clears and fills the job title input field.</doc>
-<status status="PASS" start="2026-06-03T21:12:31.972186" elapsed="0.106041"/>
+<status status="PASS" start="2026-06-15T23:42:07.125542" elapsed="0.112971"/>
 </kw>
 <kw name="Fill In Location Search Field">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-03T21:12:32.078748" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<msg time="2026-06-15T23:42:07.239120" level="INFO">${location_field} = css:#job-search-bar-location</msg>
 <var>${location_field}</var>
 <arg>css:#job-search-bar-location</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.078638" elapsed="0.000135"/>
+<status status="PASS" start="2026-06-15T23:42:07.239017" elapsed="0.000126"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${location_field}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.078859" elapsed="0.008841"/>
+<status status="PASS" start="2026-06-15T23:42:07.239220" elapsed="0.009286"/>
 </kw>
 <kw name="Click Element Three Times">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.088092" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<msg time="2026-06-15T23:42:07.248909" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.087987" elapsed="0.048596"/>
+<status status="PASS" start="2026-06-15T23:42:07.248798" elapsed="0.033424"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.136866" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<msg time="2026-06-15T23:42:07.282564" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.136704" elapsed="0.029857"/>
+<status status="PASS" start="2026-06-15T23:42:07.282383" elapsed="0.032599"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.166838" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
+<msg time="2026-06-15T23:42:07.315341" level="INFO">Clicking element 'css:#job-search-bar-location'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.166676" elapsed="0.029429"/>
+<status status="PASS" start="2026-06-15T23:42:07.315141" elapsed="0.053987"/>
 </kw>
 <arg>${location_field}</arg>
 <doc>Clciks the element three times to select all text</doc>
-<status status="PASS" start="2026-06-03T21:12:32.087817" elapsed="0.108379"/>
+<status status="PASS" start="2026-06-15T23:42:07.248619" elapsed="0.120603"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.196470" level="INFO">Typing text 'Finland' into text field 'css:#job-search-bar-location'.</msg>
+<msg time="2026-06-15T23:42:07.369557" level="INFO">Typing text 'Finland' into text field 'css:#job-search-bar-location'.</msg>
 <arg>${location_field}</arg>
 <arg>${JOB_LOCATION}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.196294" elapsed="0.043894"/>
+<status status="PASS" start="2026-06-15T23:42:07.369338" elapsed="0.043045"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:32.240616" level="INFO">Enetered location: Finland</msg>
+<msg time="2026-06-15T23:42:07.412713" level="INFO">Enetered location: Finland</msg>
 <arg>Enetered location: ${JOB_LOCATION}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.240442" elapsed="0.000224"/>
+<status status="PASS" start="2026-06-15T23:42:07.412548" elapsed="0.000208"/>
 </kw>
 <doc>Clears and fills location search field</doc>
-<status status="PASS" start="2026-06-03T21:12:32.078452" elapsed="0.162282"/>
+<status status="PASS" start="2026-06-15T23:42:07.238791" elapsed="0.174020"/>
 </kw>
 <kw name="Submit Job Search">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-03T21:12:32.241253" level="INFO">${location_field} = css:#job-search-bar-location</msg>
+<msg time="2026-06-15T23:42:07.413700" level="INFO">${location_field} = css:#job-search-bar-location</msg>
 <var>${location_field}</var>
 <arg>css:#job-search-bar-location</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.241147" elapsed="0.000135"/>
+<status status="PASS" start="2026-06-15T23:42:07.413544" elapsed="0.000190"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:32.241831" level="INFO">Sending key(s) ('RETURN',) to css:#job-search-bar-location element.</msg>
-<msg time="2026-06-03T21:12:32.519671" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2026-06-03T21:12:32.519745" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2026-06-15T23:42:07.414203" level="INFO">Sending key(s) ('RETURN',) to css:#job-search-bar-location element.</msg>
+<msg time="2026-06-15T23:42:07.690202" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-06-15T23:42:07.690278" level="INFO">Releasing special key RETURN.</msg>
 <arg>${location_field}</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2026-06-03T21:12:32.241517" elapsed="1.262315"/>
+<status status="PASS" start="2026-06-15T23:42:07.413853" elapsed="0.281603"/>
 </kw>
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:33.535172" level="INFO">${url} = https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
+<msg time="2026-06-15T23:42:08.810725" level="INFO">${url} = https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-06-03T21:12:33.504036" elapsed="0.031181"/>
+<status status="PASS" start="2026-06-15T23:42:07.695611" elapsed="1.115162"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:33.535525" level="WARN">URL after search: https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
+<msg time="2026-06-15T23:42:08.811128" level="WARN">URL after search: https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
 <arg>URL after search: ${url}</arg>
 <arg>level=WARN</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:33.535354" elapsed="0.000398"/>
+<status status="PASS" start="2026-06-15T23:42:08.810926" elapsed="0.000568"/>
 </kw>
 <doc>Execute searching by clicking Search button</doc>
-<status status="PASS" start="2026-06-03T21:12:32.240955" elapsed="1.294885"/>
+<status status="PASS" start="2026-06-15T23:42:07.413165" elapsed="1.398494"/>
 </kw>
 <kw name="Wait Until Results Are Loaded">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${RESULTS_CONTAINER}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T21:12:33.536212" elapsed="0.077567"/>
+<status status="PASS" start="2026-06-15T23:42:08.812248" elapsed="0.091628"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T21:12:34.614612" level="INFO">Slept 1 second.</msg>
-<msg time="2026-06-03T21:12:34.614697" level="INFO">Allow dynamic content to fully render</msg>
+<msg time="2026-06-15T23:42:09.904230" level="INFO">Slept 1 second.</msg>
+<msg time="2026-06-15T23:42:09.904308" level="INFO">Allow dynamic content to fully render</msg>
 <arg>1s</arg>
 <arg>reason=Allow dynamic content to fully render</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T21:12:33.613975" elapsed="1.000783"/>
+<status status="PASS" start="2026-06-15T23:42:08.904023" elapsed="1.000346"/>
 </kw>
 <doc>Waits for the job results appear on the page</doc>
-<status status="PASS" start="2026-06-03T21:12:33.536050" elapsed="1.078810"/>
+<status status="PASS" start="2026-06-15T23:42:08.812013" elapsed="1.092453"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:34.615219" level="INFO">Search submitted and results loaded</msg>
+<msg time="2026-06-15T23:42:09.904962" level="INFO">Search submitted and results loaded</msg>
 <arg>Search submitted and results loaded</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:34.615090" elapsed="0.000175"/>
+<status status="PASS" start="2026-06-15T23:42:09.904781" elapsed="0.000236"/>
 </kw>
 <doc>Enter the search criteria for Test Engineer positions</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-06-03T21:12:31.969555" elapsed="2.645898"/>
+<status status="PASS" start="2026-06-15T23:42:07.125049" elapsed="2.780212"/>
 </test>
-<test id="s1-t3" name="Linkedin Page Loaded Successfully" line="115">
+<test id="s1-t4" name="Linkedin Page Loaded Successfully" line="165">
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:34.625271" level="INFO">${title} = 292 Test Engineer Työpaikat Finland</msg>
+<msg time="2026-06-15T23:42:09.919091" level="INFO">${title} = 262 Test Engineer Työpaikat Finland</msg>
 <var>${title}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-06-03T21:12:34.616227" elapsed="0.009090"/>
+<status status="PASS" start="2026-06-15T23:42:09.906134" elapsed="0.013003"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:34.625748" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
+<msg time="2026-06-15T23:42:09.919700" level="INFO">Opening browser 'chrome' to base url 'https://www.linkedin.com/jobs/search?keywords=&amp;location=Finland&amp;geoId=100456013&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T21:12:34.625536" elapsed="2.356547"/>
+<status status="PASS" start="2026-06-15T23:42:09.919421" elapsed="1.849215"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${title}</arg>
 <arg>Työpaikat</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-06-03T21:12:36.982374" elapsed="0.000214"/>
+<status status="PASS" start="2026-06-15T23:42:11.769005" elapsed="0.000283"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:36.999280" level="INFO">Current page contains element 'css:.switcher-tabs__placeholder-text'.</msg>
+<msg time="2026-06-15T23:42:14.889712" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-15T23:42:14.889834" level="FAIL">Page should have contained element 'css:.switcher-tabs__placeholder-text' but did not.</msg>
 <arg>css:.switcher-tabs__placeholder-text</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2026-06-03T21:12:36.982764" elapsed="0.016596"/>
+<status status="FAIL" start="2026-06-15T23:42:11.769566" elapsed="3.151554">Page should have contained element 'css:.switcher-tabs__placeholder-text' but did not.</status>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:36.999727" level="INFO">LinkedIn page loaded successfully</msg>
 <arg>LinkedIn page loaded successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:36.999610" elapsed="0.000162"/>
+<status status="NOT RUN" start="2026-06-15T23:42:14.921467" elapsed="0.000061"/>
 </kw>
 <doc>Verify that page opened without issues</doc>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-06-03T21:12:34.615901" elapsed="2.384041"/>
+<status status="FAIL" start="2026-06-15T23:42:09.905773" elapsed="5.016039">Page should have contained element 'css:.switcher-tabs__placeholder-text' but did not.</status>
 </test>
-<test id="s1-t4" name="Job Search Returns Results" line="124">
+<test id="s1-t5" name="Job Search Returns Results" line="174">
 <kw name="Get Job Results Count">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:37.046010" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2af9687b0b7ef9389dde1ec0adb695cc", element="f.7E11D95308D91474E4E8C790D48930EA.d.A36C7D9C90C1F724A3FA238985A4BBC1.e.139")&gt;, &lt;selenium.webdri...</msg>
+<msg time="2026-06-15T23:42:17.946747" level="INFO">${elements} = []</msg>
 <var>${elements}</var>
 <arg>${JOB_CARD_SELECTOR}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.000993" elapsed="0.045071"/>
+<status status="PASS" start="2026-06-15T23:42:14.922877" elapsed="3.023908"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.046376" level="INFO">Length is 60.</msg>
-<msg time="2026-06-03T21:12:37.046459" level="INFO">${count} = 60</msg>
+<msg time="2026-06-15T23:42:17.947028" level="INFO">Length is 0.</msg>
+<msg time="2026-06-15T23:42:17.947083" level="INFO">${count} = 0</msg>
 <var>${count}</var>
 <arg>${elements}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.046224" elapsed="0.000256"/>
+<status status="PASS" start="2026-06-15T23:42:17.946911" elapsed="0.000190"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2026-06-03T21:12:37.046527" elapsed="0.000050"/>
+<status status="PASS" start="2026-06-15T23:42:17.947152" elapsed="0.000050"/>
 </return>
-<msg time="2026-06-03T21:12:37.046679" level="INFO">${count} = 60</msg>
+<msg time="2026-06-15T23:42:17.947302" level="INFO">${count} = 0</msg>
 <var>${count}</var>
 <doc>Return number of job listing cards from results</doc>
-<status status="PASS" start="2026-06-03T21:12:37.000784" elapsed="0.045914"/>
+<status status="PASS" start="2026-06-15T23:42:14.922681" elapsed="3.024640"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.047268" level="INFO">Found 60 job listing(s) for "Test Engineer" in "Finland"</msg>
+<msg time="2026-06-15T23:42:17.947876" level="INFO">Found 0 job listing(s) for "Test Engineer" in "Finland"</msg>
 <arg>Found ${count} job listing(s) for "${JOB_TITLE}" in "${JOB_LOCATION}"</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.046999" elapsed="0.000328"/>
+<status status="PASS" start="2026-06-15T23:42:17.947621" elapsed="0.000304"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
+<msg time="2026-06-15T23:42:17.948468" level="FAIL">Expected at least 1 result(s), but got 0</msg>
 <arg>${count} &gt;= ${MIN_RESULTS}</arg>
 <arg>Expected at least ${MIN_RESULTS} result(s), but got ${count}</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.047516" elapsed="0.000361"/>
+<status status="FAIL" start="2026-06-15T23:42:17.948128" elapsed="0.000410">Expected at least 1 result(s), but got 0</status>
 </kw>
 <doc>Verify that at least one result returns from job search</doc>
 <tag>Jobs</tag>
 <tag>LinkedIn</tag>
 <tag>Smoke</tag>
-<status status="PASS" start="2026-06-03T21:12:37.000321" elapsed="0.047764"/>
+<status status="FAIL" start="2026-06-15T23:42:14.922258" elapsed="3.026517">Expected at least 1 result(s), but got 0</status>
 </test>
-<test id="s1-t5" name="Job Listings Contain Relevant Keywords" line="132">
+<test id="s1-t6" name="Job Listings Contain Relevant Keywords" line="182">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-06-15T23:42:39.380655" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<msg time="2026-06-15T23:42:39.380982" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b78fd]
+	chromedriver!(No symbol) [0x7ff7090a33c0]
+	chromedriver!(No symbol) [0x7ff7090a331c]
+	chromedriver!(No symbol) [0x7ff7090a1b93]
+	chromedriver!(No symbol) [0x7ff7090a272f]
+	chromedriver!(No symbol) [0x7ff7090bd1e6]
+	chromedriver!(No symbol) [0x7ff7090bdd2b]
+	chromedriver!(No symbol) [0x7ff7090c2825]
+	chromedriver!(No symbol) [0x7ff7090c28ef]
+	chromedriver!(No symbol) [0x7ff709110bfa]
+	chromedriver!(No symbol) [0x7ff70911177c]
+	chromedriver!(No symbol) [0x7ff709161f27]
+	chromedriver!(No symbol) [0x7ff70915eaeb]
+	chromedriver!(No symbol) [0x7ff709103a58]
+	chromedriver!(No symbol) [0x7ff709104953]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff709589984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff709589b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff70956ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
 <arg>${RESULTS_CONTAINER}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.048935" elapsed="0.013516"/>
+<status status="FAIL" start="2026-06-15T23:42:17.949577" elapsed="21.475497">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b78fd]
+	chromedriver!(No symbol) [0x7ff7090a33c0]
+	chromedriver!(No symbol) [0x7ff7090a331c]
+	chromedriver!(No symbol) [0x7ff7090a1b93]
+	chromedriver!(No symbol) [0x7ff7090a272f]
+	chromedriver!(No symbol) [0x7ff7090bd1e6]
+	chromedriver!(No symbol) [0x7ff7090bdd2b]
+	chromedriver!(No symbol) [0x7ff7090c2825]
+	chromedriver!(No symbol) [0x7ff7090c28ef]
+	chromedriver!(No symbol) [0x7ff709110bfa]
+	chromedriver!(No symbol) [0x7ff70911177c]
+	chromedriver!(No symbol) [0x7ff709161f27]
+	chromedriver!(No symbol) [0x7ff70915eaeb]
+	chromedriver!(No symbol) [0x7ff709103a58]
+	chromedriver!(No symbol) [0x7ff709104953]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff709589984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff709589b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff70956ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${JOB_CARD_SELECTOR}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.062798" elapsed="0.355605"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.425337" elapsed="0.000042"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:37.560132" level="INFO">${page_text} = Sales Assistant
-Sales Assistant
-ZARA
-Helsinki
-1 viikko sitten
-Puutuotteiden Pakkaaja
-Puutuotteiden Pakkaaja
-SOL ☀
-Riihimäki
-2 viikkoa sitten
-Studio Creative Director
-Studio Creative Director
-Netflix
-H...</msg>
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.418662" elapsed="0.141618"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.425673" elapsed="0.000046"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.560990" level="INFO">${lower_text} = sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-h...</msg>
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.560521" elapsed="0.000499"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.425924" elapsed="0.000043"/>
 </kw>
 <kw name="Should Contain Any">
-<for flavor="IN">
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.562048" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'test engineer'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.561880" elapsed="0.000294">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'test engineer'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.562262" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.561776" elapsed="0.000506"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.562450" elapsed="0.000019"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.562506" elapsed="0.000020"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.562353" elapsed="0.000201"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.562335" elapsed="0.000245"/>
-</if>
-<var name="${substring}">test engineer</var>
-<status status="PASS" start="2026-06-03T21:12:37.561691" elapsed="0.000908"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.562980" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'qa engineer'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.562845" elapsed="0.000192">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'qa engineer'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.563116" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.562759" elapsed="0.000376"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.563282" elapsed="0.000019"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.563334" elapsed="0.000016"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.563195" elapsed="0.000178"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.563181" elapsed="0.000215"/>
-</if>
-<var name="${substring}">qa engineer</var>
-<status status="PASS" start="2026-06-03T21:12:37.562699" elapsed="0.000714"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.563769" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'quality engineer'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.563639" elapsed="0.000180">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'quality engineer'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.563891" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.563560" elapsed="0.000349"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.564041" elapsed="0.000019"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.564134" elapsed="0.000020"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.563964" elapsed="0.000214"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.563952" elapsed="0.000250"/>
-</if>
-<var name="${substring}">quality engineer</var>
-<status status="PASS" start="2026-06-03T21:12:37.563506" elapsed="0.000713"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.564576" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'test automation'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.564449" elapsed="0.000174">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'test automation'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.564695" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.564368" elapsed="0.000346"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.564850" elapsed="0.000019"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.564902" elapsed="0.000015"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.564769" elapsed="0.000170"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.564757" elapsed="0.000204"/>
-</if>
-<var name="${substring}">test automation</var>
-<status status="PASS" start="2026-06-03T21:12:37.564312" elapsed="0.000666"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.565356" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'testiautomaatio'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.565219" elapsed="0.000186">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'testiautomaatio'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.565476" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.565119" elapsed="0.000375"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.565628" elapsed="0.000018"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.565678" elapsed="0.000015"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.565549" elapsed="0.000166"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.565537" elapsed="0.000201"/>
-</if>
-<var name="${substring}">testiautomaatio</var>
-<status status="PASS" start="2026-06-03T21:12:37.565066" elapsed="0.000688"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.567081" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'laadunvarmistus'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.566947" elapsed="0.000183">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'laadunvarmistus'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.567205" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.566861" elapsed="0.000363"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.567358" elapsed="0.000018"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.567409" elapsed="0.000016"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.567280" elapsed="0.000166"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.567268" elapsed="0.000201"/>
-</if>
-<var name="${substring}">laadunvarmistus</var>
-<status status="PASS" start="2026-06-03T21:12:37.566797" elapsed="0.000688"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.567975" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'testaaja'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.567821" elapsed="0.000205">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'testaaja'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.568114" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.567719" elapsed="0.000424"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.568335" elapsed="0.000027"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.568410" elapsed="0.000024"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.568225" elapsed="0.000245"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.568211" elapsed="0.000297"/>
-</if>
-<var name="${substring}">testaaja</var>
-<status status="PASS" start="2026-06-03T21:12:37.567644" elapsed="0.000893"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.569044" level="FAIL">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'tester'</msg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.568858" elapsed="0.000260">'sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-helsinki
-2 viikkoa sitten
-freelance graphic designer
-freelance graphic designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-freelance brand designer
-freelance brand designer
-mindrift
-finland
-ole varhainen hakija
-1 viikko sitten
-consultant
-consultant
-mckinsey &amp; company
-helsinki' does not contain 'tester'</status>
-</kw>
-<msg time="2026-06-03T21:12:37.569234" level="INFO">${found} = False</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.568749" elapsed="0.000515"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.569469" elapsed="0.000029"/>
-</kw>
-<return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.569554" elapsed="0.000025"/>
-</return>
-<status status="NOT RUN" start="2026-06-03T21:12:37.569351" elapsed="0.000266"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.569334" elapsed="0.000320"/>
-</if>
-<var name="${substring}">tester</var>
-<status status="PASS" start="2026-06-03T21:12:37.568678" elapsed="0.001003"/>
-</iter>
-<var>${substring}</var>
-<value>@{substrings}</value>
-<status status="PASS" start="2026-06-03T21:12:37.561503" elapsed="0.008224"/>
-</for>
-<kw name="Fail" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.570008" level="FAIL">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation', 'testiautomaatio', 'laadunvarmistus', 'testaaja', 'tester']</msg>
-<arg>None of the expected substrings were found in the text: ${substrings}</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.569833" elapsed="0.000235">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation', 'testiautomaatio', 'laadunvarmistus', 'testaaja', 'tester']</status>
-</kw>
 <arg>${lower_text}</arg>
 <arg>test engineer</arg>
 <arg>qa engineer</arg>
@@ -1119,100 +587,118 @@ helsinki' does not contain 'tester'</status>
 <arg>testaaja</arg>
 <arg>tester</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="FAIL" start="2026-06-03T21:12:37.561307" elapsed="0.008887">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation', 'testiautomaatio', 'laadunvarmistus', 'testaaja', 'tester']</status>
+<status status="NOT RUN" start="2026-06-15T23:42:39.426309" elapsed="0.000041"/>
 </kw>
 <doc>Spot-check that visible job cards mention Test Engineer or related terms.</doc>
 <tag>jobs</tag>
 <tag>linkedin</tag>
 <tag>validation</tag>
-<status status="FAIL" start="2026-06-03T21:12:37.048469" elapsed="0.521973">None of the expected substrings were found in the text: ['test engineer', 'qa engineer', 'quality engineer', 'test automation', 'testiautomaatio', 'laadunvarmistus', 'testaaja', 'tester']</status>
+<status status="FAIL" start="2026-06-15T23:42:17.949231" elapsed="21.477405">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b78fd]
+	chromedriver!(No symbol) [0x7ff7090a33c0]
+	chromedriver!(No symbol) [0x7ff7090a331c]
+	chromedriver!(No symbol) [0x7ff7090a1b93]
+	chromedriver!(No symbol) [0x7ff7090a272f]
+	chromedriver!(No symbol) [0x7ff7090bd1e6]
+	chromedriver!(No symbol) [0x7ff7090bdd2b]
+	chromedriver!(No symbol) [0x7ff7090c2825]
+	chromedriver!(No symbol) [0x7ff7090c28ef]
+	chromedriver!(No symbol) [0x7ff709110bfa]
+	chromedriver!(No symbol) [0x7ff70911177c]
+	chromedriver!(No symbol) [0x7ff709161f27]
+	chromedriver!(No symbol) [0x7ff70915eaeb]
+	chromedriver!(No symbol) [0x7ff709103a58]
+	chromedriver!(No symbol) [0x7ff709104953]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!GetHandleVerifier [0x7ff709589984+1ef84]
+	chromedriver!GetHandleVerifier [0x7ff709589b14+1f114]
+	chromedriver!GetHandleVerifier [0x7ff70956ca77+2077]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
 </test>
-<test id="s1-t6" name="Job Listings Are Located In Finland" line="142">
+<test id="s1-t7" name="Job Listings Are Located In Finland" line="192">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T21:12:37.840543" level="INFO">${page_text} = Sales Assistant
-Sales Assistant
-ZARA
-Helsinki
-1 viikko sitten
-Puutuotteiden Pakkaaja
-Puutuotteiden Pakkaaja
-SOL ☀
-Riihimäki
-2 viikkoa sitten
-Studio Creative Director
-Studio Creative Director
-Netflix
-H...</msg>
+<msg time="2026-06-15T23:42:39.429403" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<msg time="2026-06-15T23:42:39.429807" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
 <var>${page_text}</var>
 <arg>${RESULTS_CONTAINER}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.571217" elapsed="0.269370"/>
+<status status="FAIL" start="2026-06-15T23:42:39.427564" elapsed="0.003416">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.841072" level="INFO">${lower_text} = sales assistant
-sales assistant
-zara
-helsinki
-1 viikko sitten
-puutuotteiden pakkaaja
-puutuotteiden pakkaaja
-sol ☀
-riihimäki
-2 viikkoa sitten
-studio creative director
-studio creative director
-netflix
-h...</msg>
 <var>${lower_text}</var>
 <arg>$page_text.lower()</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.840814" elapsed="0.000287"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.431181" elapsed="0.000037"/>
 </kw>
 <kw name="Should Contain Any">
-<for flavor="IN">
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.841983" elapsed="0.000105"/>
-</kw>
-<msg time="2026-06-03T21:12:37.842152" level="INFO">${found} = True</msg>
-<var>${found}</var>
-<arg>Should Contain</arg>
-<arg>${text}</arg>
-<arg>${substring}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.841889" elapsed="0.000282"/>
-</kw>
-<if>
-<branch type="IF" condition="${found}">
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-06-03T21:12:37.842399" level="INFO">Found expected keyword: "finland"</msg>
-<arg>Found expected keyword: "${substring}"</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.842315" elapsed="0.000114"/>
-</kw>
-<return>
-<status status="PASS" start="2026-06-03T21:12:37.842468" elapsed="0.000033"/>
-</return>
-<status status="PASS" start="2026-06-03T21:12:37.842231" elapsed="0.000300"/>
-</branch>
-<status status="PASS" start="2026-06-03T21:12:37.842216" elapsed="0.000343"/>
-</if>
-<var name="${substring}">finland</var>
-<status status="PASS" start="2026-06-03T21:12:37.841815" elapsed="0.000765"/>
-</iter>
-<var>${substring}</var>
-<value>@{substrings}</value>
-<status status="PASS" start="2026-06-03T21:12:37.841572" elapsed="0.001042"/>
-</for>
-<kw name="Fail" owner="BuiltIn">
-<arg>None of the expected substrings were found in the text: ${substrings}</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2026-06-03T21:12:37.842684" elapsed="0.000018"/>
-</kw>
 <arg>${lower_text}</arg>
 <arg>finland</arg>
 <arg>helsinki</arg>
@@ -1221,37 +707,392 @@ h...</msg>
 <arg>oulu</arg>
 <arg>turku</arg>
 <doc>Passes if the given text contains at least one of the provided substrings.</doc>
-<status status="PASS" start="2026-06-03T21:12:37.841354" elapsed="0.001393"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.431509" elapsed="0.000030"/>
 </kw>
 <doc>Verify that job offers are in proper location</doc>
 <tag>Dinland</tag>
 <tag>linkedin</tag>
 <tag>Verification</tag>
-<status status="PASS" start="2026-06-03T21:12:37.570879" elapsed="0.272041"/>
+<status status="FAIL" start="2026-06-15T23:42:39.427145" elapsed="0.004586">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
+</test>
+<test id="s1-t8" name="Search Returns Results For QA Titles" line="199">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<arg>/nSearching for:</arg>
+<arg>${title}</arg>
+<arg>in Finland</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433086" elapsed="0.000049"/>
+</kw>
+<kw name="Navigate To LinkedIn Jobs">
+<doc>Navigates back to the LinkedIn Jobs base URL for a fresh search.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433263" elapsed="0.000025"/>
+</kw>
+<kw name="Fill In Search Fields">
+<arg>${title}</arg>
+<arg>Finland</arg>
+<doc>Fills in both the title and location search fields and submits.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433412" elapsed="0.000030"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433530" elapsed="0.000020"/>
+</kw>
+<kw name="Get Job Results Count">
+<var>${count}</var>
+<doc>Return number of job listing cards from results</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433656" elapsed="0.000026"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Found</arg>
+<arg>${count}</arg>
+<arg>result(s)</arg>
+<arg>for</arg>
+<arg>"${title}"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433756" elapsed="0.000019"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count}</arg>
+<arg>&gt;=</arg>
+<arg>${MIN_RESULTS}</arg>
+<arg>Expected at least ${MIN_RESULTS} results(s) for "${title}", got ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.433849" elapsed="0.000026"/>
+</kw>
+<var name="${title}"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.432948" elapsed="0.000975"/>
+</iter>
+<msg time="2026-06-15T23:42:39.433986" level="FAIL">Value of variable '@{JOB_TITLES}' is not list or list-like.</msg>
+<var>${title}</var>
+<value>@{JOB_TITLES}</value>
+<status status="FAIL" start="2026-06-15T23:42:39.432734" elapsed="0.001300">Value of variable '@{JOB_TITLES}' is not list or list-like.</status>
+</for>
+<doc>Verify that search returns results for related QA titles</doc>
+<tag>linkedin</tag>
+<tag>search</tag>
+<tag>titles</tag>
+<status status="FAIL" start="2026-06-15T23:42:39.432296" elapsed="0.002004">Value of variable '@{JOB_TITLES}' is not list or list-like.</status>
+</test>
+<test id="s1-t9" name="Search Returns Results In Finnish Cities" line="213">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<arg>\nSearching for Test Engineer in: ${city}</arg>
+<arg>level=WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.435371" elapsed="0.000027"/>
+</kw>
+<kw name="Navigate To LinkedIn Jobs">
+<doc>Navigates back to the LinkedIn Jobs base URL for a fresh search.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.435514" elapsed="0.000028"/>
+</kw>
+<kw name="Fill In Search Fields">
+<arg>Test Engineer</arg>
+<arg>${city}</arg>
+<doc>Fills in both the title and location search fields and submits.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.435668" elapsed="0.000027"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.435795" elapsed="0.000024"/>
+</kw>
+<kw name="Get Job Results Count">
+<var>${count}</var>
+<doc>Return number of job listing cards from results</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.436004" elapsed="0.000105"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Found ${count} result(s) in ${city}</arg>
+<arg>level=WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.436195" elapsed="0.000024"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt;= ${MIN_RESULTS}</arg>
+<arg>Expected at least ${MIN_RESULTS} result(s) in "${city}", got ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.436371" elapsed="0.000026"/>
+</kw>
+<var name="${city}"/>
+<status status="NOT RUN" start="2026-06-15T23:42:39.435287" elapsed="0.001151"/>
+</iter>
+<msg time="2026-06-15T23:42:39.436491" level="FAIL">Value of variable '@{CITIES}' is not list or list-like.</msg>
+<var>${city}</var>
+<value>@{CITIES}</value>
+<status status="FAIL" start="2026-06-15T23:42:39.435121" elapsed="0.001415">Value of variable '@{CITIES}' is not list or list-like.</status>
+</for>
+<doc>Verify Test Engineer search returns results in major Finnish cities.</doc>
+<tag>cities</tag>
+<tag>linkedin</tag>
+<tag>search</tag>
+<status status="FAIL" start="2026-06-15T23:42:39.434746" elapsed="0.002051">Value of variable '@{CITIES}' is not list or list-like.</status>
+</test>
+<test id="s1-t10" name="Search With Full Time Filter Returns Results" line="227">
+<kw name="Navigate To LinkedIn Jobs">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-06-15T23:42:39.438288" level="INFO">Opening url 'https://www.linkedin.com/jobs/search/'</msg>
+<msg time="2026-06-15T23:42:39.440326" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<msg time="2026-06-15T23:42:39.440683" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<arg>${JOBS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="FAIL" start="2026-06-15T23:42:39.438141" elapsed="0.014850">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:#job-search-bar-keywords</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.453203" elapsed="0.000061"/>
+</kw>
+<doc>Navigates back to the LinkedIn Jobs base URL for a fresh search.</doc>
+<status status="FAIL" start="2026-06-15T23:42:39.437886" elapsed="0.015524">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
+</kw>
+<kw name="Fill In Search Fields">
+<arg>Test Engineer</arg>
+<arg>Finland</arg>
+<doc>Fills in both the title and location search fields and submits.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.453727" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.454015" elapsed="0.000037"/>
+</kw>
+<kw name="Apply Full Time Filter">
+<doc>Opens the job type filter and selects Full-time.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.454378" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Results Are Loaded">
+<doc>Waits for the job results appear on the page</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.454686" elapsed="0.000042"/>
+</kw>
+<kw name="Get Job Results Count">
+<var>${count}</var>
+<doc>Return number of job listing cards from results</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.455002" elapsed="0.000037"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Found ${count} full-time result(s)</arg>
+<arg>level=WARN</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.455243" elapsed="0.000048"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt;= ${MIN_RESULTS}</arg>
+<arg>Expected at least ${MIN_RESULTS} full-time result(s), got ${count}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-06-15T23:42:39.455491" elapsed="0.000037"/>
+</kw>
+<doc>Verify Test Engineer full-time jobs are available in Finland.</doc>
+<tag>filters</tag>
+<tag>fulltime</tag>
+<tag>linkedin</tag>
+<tag>search</tag>
+<status status="FAIL" start="2026-06-15T23:42:39.437416" elapsed="0.018335">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</status>
 </test>
 <doc>pip install robotframework robotframework-seleniumlibrary
 ChromeDriver (or GeckoDriver) matching browser version</doc>
-<status status="FAIL" start="2026-06-03T21:12:24.299637" elapsed="13.543837"/>
+<status status="FAIL" start="2026-06-15T23:41:57.568276" elapsed="41.888115"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="7" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Dinland</stat>
+<stat pass="0" fail="1" skip="0">cities</stat>
+<stat pass="0" fail="1" skip="0">Dinland</stat>
 <stat pass="1" fail="0" skip="0">Easy</stat>
-<stat pass="2" fail="1" skip="0">Jobs</stat>
-<stat pass="3" fail="1" skip="0">LinkedIn</stat>
-<stat pass="4" fail="0" skip="0">Smoke</stat>
+<stat pass="0" fail="1" skip="0">filters</stat>
+<stat pass="0" fail="1" skip="0">fulltime</stat>
+<stat pass="1" fail="2" skip="0">Jobs</stat>
+<stat pass="1" fail="6" skip="0">LinkedIn</stat>
+<stat pass="0" fail="3" skip="0">search</stat>
+<stat pass="2" fail="2" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Smoke Easy</stat>
+<stat pass="0" fail="1" skip="0">titles</stat>
 <stat pass="0" fail="1" skip="0">validation</stat>
-<stat pass="1" fail="0" skip="0">Verification</stat>
+<stat pass="0" fail="1" skip="0">Verification</stat>
 </tag>
 <suite>
-<stat name="Linkedin" id="s1" pass="5" fail="1" skip="0">Linkedin</stat>
+<stat name="Linkedin" id="s1" pass="3" fail="7" skip="0">Linkedin</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-06-03T21:12:32.077906" level="WARN">Field value after input: Test Engineer</msg>
-<msg time="2026-06-03T21:12:33.535525" level="WARN">URL after search: https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
+<msg time="2026-06-15T23:42:07.238131" level="WARN">Field value after input: Test Engineer</msg>
+<msg time="2026-06-15T23:42:08.811128" level="WARN">URL after search: https://www.linkedin.com/jobs/search?keywords=Test%20Engineer&amp;location=Finland&amp;geoId=&amp;trk=public_jobs_jobs-search-bar_search-submit&amp;position=1&amp;pageNum=0</msg>
+<msg time="2026-06-15T23:42:39.380655" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<msg time="2026-06-15T23:42:39.429403" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
+<msg time="2026-06-15T23:42:39.440326" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70957fd95+15395]
+	chromedriver!GetHandleVerifier [0x7ff70957fdf0+153f0]
+	chromedriver!(No symbol) [0x7ff7090b76e6]
+	chromedriver!(No symbol) [0x7ff709102ad3]
+	chromedriver!(No symbol) [0x7ff709139c82]
+	chromedriver!(No symbol) [0x7ff709133aa2]
+	chromedriver!(No symbol) [0x7ff709133263]
+	chromedriver!(No symbol) [0x7ff7090803e5]
+	chromedriver!GetHandleVerifier [0x7ff709b45511+5dab11]
+	chromedriver!GetHandleVerifier [0x7ff709b3f8fb+5d4efb]
+	chromedriver!GetHandleVerifier [0x7ff709b63205+5f8805]
+	chromedriver!GetHandleVerifier [0x7ff70959cc6e+3226e]
+	chromedriver!GetHandleVerifier [0x7ff7095a562c+3ac2c]
+	chromedriver!(No symbol) [0x7ff70907f188]
+	chromedriver!GetHandleVerifier [0x7ff709d01238+796838]
+	KERNEL32!BaseThreadInitThunk [0x7ff94b61e957+17]
+	ntdll!RtlUserThreadStart [0x7ff94c547c1c+2c]
+</msg>
 </errors>
 </robot>
