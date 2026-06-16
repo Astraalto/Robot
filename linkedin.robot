@@ -206,8 +206,8 @@ Search Returns Results For QA Titles
         Wait Until Results Are Loaded
         ${count}=   Get Job Results Count
         Log   Found  ${count}  result(s)  for  "${title}"   #  level=WARN
-        Should Be True     ${count}  >=  ${MIN_RESULTS}   
-        ...      Expected at least ${MIN_RESULTS} results(s) for "${title}", got ${count}
+        Should Be True    ${count}>=${MIN_RESULTS}
+        ...     Expected at least ${MIN_RESULTS} result(s) for "${title}", got ${count}
     END 
 
 Search Returns Results In Finnish Cities
