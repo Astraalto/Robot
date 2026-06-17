@@ -200,12 +200,12 @@ Search Returns Results For QA Titles
     [Documentation]       Verify that search returns results for related QA titles
     [Tags]                search    titles    linkedin 
     FOR     ${title}    IN   @{JOB_TITLES}
-        Log   /nSearching for:  ${title}  in Finland    # level=WARN
+        Log    \nSearching for: ${title} in Finland    level=WARN
         Navigate To Linkedin Jobs
         Fill In Search Fields   ${title}    Finland
         Wait Until Results Are Loaded
         ${count}=   Get Job Results Count
-        Log   Found  ${count}  result(s)  for  "${title}"   #  level=WARN
+        Log   Found  ${count}  result(s)  for  "${title}"   level=WARN
         Should Be True    ${count}>=${MIN_RESULTS}
         ...     Expected at least ${MIN_RESULTS} result(s) for "${title}", got ${count}
     END 
